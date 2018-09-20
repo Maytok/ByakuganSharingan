@@ -1,0 +1,35 @@
+fertility_ritual;;;;;Ritual de la fertilidad;;;;;;;;;x
+fertility_ritual_desc;;;;;Convoca a un ritual de la fertilidad, una antiquísima tradición sagrada Pentaghast. Durará todo un mes y servirá para unir a todos los integrantes en usa sola hermandad.;;;;;;;;;x
+
+CB_HELEN_OF_TROY;Get Vee;Obtenez Eevee;Hol dir Vee;;Obtener a Vee;;;;;;;;;x
+WAR_HELEN_OF_TROY;Get Vee;Obtenez Eevee;Hol dir Vee;;Obtener a Vee;;;;;;;;;x
+
+helen_of_troy_cb;Get Vee;Obtenez Eevee;Hol dir Vee;;Obtener a Vee;;;;;;;;;x
+helen_of_troy_cb_desc;The most beautiful woman in the world is in the court of this king. If we declare war, it will pass to ours.;La plus belle femme du monde est dans la cour de ce roi. Si nous déclarons la guerre, elle passera à la nôtre;;;La mujer más hermosa del mundo está en la corte de este rey. Si le declaramos la guerra, pasará a la nuestra.;;;;;;;;;x
+
+
+EVTTITLE.ACS.1;Celestial warning;Avertissement céleste;Himmlische Warnung;;Advertencia celeste;;;;;;;;;x
+EVTDESC.ACS.1;A two-headed comet has been sighted. Its tail covers the whole width of the sky. Will it be the announcement of an imminent danger?;Une comète à deux têtes a été aperçue. Sa queue couvre toute la voûte du ciel. Sera-ce l'annonce d'un danger imminent?;;;Se ha avistado un cometa de dos cabezas. Su cola abarca toda la bóveda del cielo. ¿Será el anuncio de un inminente peligro?;;;;;;;;;x
+EVTOPTA.ACS.1;Misfortunes are approaching!;Misfortunes are approaching!;Misfortunes are approaching!;;¡Se aproximan desgracias!;;;;;;;;;x
+
+EVTTITLE.ACS.2;Encounter;;;;Encuentro;;;;;;;;;x
+EVTDESC.ACS.2;During a hunt, you hear fighting sounds from a distance. When you get closer you see that they are two peasants who are being harassed by a crook. Will you defend them?;During a hunt, you hear fighting sounds from a distance. When you get closer you see that they are two peasants who are being harassed by a crook. Will you defend them?;During a hunt, you hear fighting sounds from a distance. When you get closer you see that they are two peasants who are being harassed by a crook. Will you defend them?;;Durante una cacería, oyes sonidos de lucha a la distancia. Al acercarte ves que son dos campesinos acosados por un maleante. ¿Los defenderás?;;;;;;;;;x
+EVTOPTA.ACS.2;For the honor!;Pour l'honneur!;Ich bin ein Ritter!;;¡Por el honor!;;;;;;;;;x
+EVTDESC.ACS.3;Olaf, the peasant I rescued, has turned out to be the head of a mercenary band. In gratitude for my help, he has promised to serve me when I need it.;Olaf, the peasant I rescued, has turned out to be the head of a mercenary band. In gratitude for my help, he has promised to serve me when I need it.;Olaf, the peasant I rescued, has turned out to be the head of a mercenary band. In gratitude for my help, he has promised to serve me when I need it.;;Olaf, el campesino que rescaté, ha resultado ser el jefe de una banda mercenaria. En agradecimiento por mi ayuda, ha prometido servirme cuando yo lo requiera.;;;;;;;;;x
+EVTDESC.ACS.6;Olaf has left in search of adventures, but he has left Senua, his sister, in my court;Olaf has left in search of adventures, but he has left Senua, his sister, in my court;Olaf has left in search of adventures, but he has left Senua, his sister, in my court;;Olaf se ha marchado en busca de aventuras, pero ha dejado a Senua, su hermana, en mi corte;;;;;;;;;x
+
+EVTTITLE_ACS_8;Twins;;Manschettenknöpfe;Jumeaux;Gemelos;;;;;;;;;x
+EVTDESC_ACS_8;Senua has given birth to twins. The male baby has strange white eyes and the female baby has curious red eyes. Senua and I went to bed nine months ago. Maybe they are my children.;Senua has given birth to twins. The male baby has strange white eyes and the female baby has curious red eyes. Senua and I went to bed nine months ago. Maybe they are my children.;Senua has given birth to twins. The male baby has strange white eyes and the female baby has curious red eyes. Senua and I went to bed nine months ago. Maybe they are my children.;;Senua ha alumbrado gemelos. El varón tiene extraños ojos blancos y la mujer unos curiosos ojos rojos. Senua y yo nos acostamos hace nueve meses. Quizá ellos son mis hijos.;;;;;;;;;x
+OK;I understand;I understand;I understand;;Entendido;;;;;;;;;x
+
+EVTTITLE_ACS_9;Tragedy;Tragedy;Tragedy;;Tragedia;;;;;;;;;x
+EVTDESC_ACS_9;A hooded person has sneaked into the palace and kidnapped Senua's son. He even killed one of my vassals who was visiting me!;A hooded person has sneaked into the palace and kidnapped Senua's son. He even killed one of my vassals who was visiting me!;A hooded person has sneaked into the palace and kidnapped Senua's son. He even killed one of my vassals who was visiting me!;;Una figura encapuchada se ha colado en el palacio y ha secuestrado al hijo de Senua. ¡Incluso ha matado a uno de mis vasallos que se hallaba de visita!;;;;;;;;;x
+EVTOPTA_ACS_9;I feel stressed;I feel stressed;I feel stressed;;Todo esto me ha agobiado;;;;;;;;;x
+EVTTITLE.ACS.21;The flower opens;The flower opens;The flower opens;;La flor se abre;;;;;;;;;x
+EVTDESC.ACS.21;The little girl in my court is getting more beautiful every day. The females admire and envy her delicate beauty and the males begin to look at her differently. She will be a precious woman.;The little girl in my court is getting more beautiful every day. The females admire and envy her delicate beauty and the males begin to look at her differently. She will be a precious woman.;;;La pequeña de mi corte se pone cada día más hermosa. Las cortesanas admiran y envidian su delicada belleza y los cortesanos comienzan a mirarla diferente. Invcluso yo me embeleso con sus preciosos rasgos.;;;;;;;;;x
+EVTDESC.ACS.28;;;;;El Avatar de nuestra diosa ha pasado a un nuevo recipiente. Cada vez se encuentra más cerca de la perfección y con ella, del dominio del resto del mundo.;;;;;;;;;x
+EVT_TT_ACS206;;;;;Adoraremos a nuestra diosa en el gran festival en su nombre;;;;;;;;;x
+had_pentaghast_fertility_ritual;;;;;Estuvo en una misteriosa reunión;;;;;;;;;x
+ACS25DESC;There is a man in the court who attracts me. Should I sleep with him?;Il y a un homme dans la cour qui m'attire. Dois-je dormir avec lui?;Da ist ein Mann im Gericht, der mich anzieht. Soll ich mit ihm schlafen?;;Hay un hombre en la corte que me atrae. ¿Debería acostarme con él?;;;;;;;;;x
+ACS25OPTBA;That our bodies embrace in the bed;Que nos corps s'embrassent dans le lit;Dass unsere Korper sich im Bett umarmen;;Que nuestros cuerpos se mezclen en el lecho;;;;;;;;;x
+ACS25OPTB;I must dominate myself;Je dois me dominer;Ich muss mich beherrschen;;Debo dominarme;;;;;;;;;x

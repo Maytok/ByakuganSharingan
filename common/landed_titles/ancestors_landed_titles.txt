@@ -1,0 +1,5 @@
+b_alsitah = {
+	bodpa = "Al-Sitah"
+	han = "Al-Sitah"
+	holy_site = ishtar_religion
+}

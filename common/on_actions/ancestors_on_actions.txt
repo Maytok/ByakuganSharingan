@@ -1,0 +1,43 @@
+on_startup = {
+	events = {
+		ACS.1 # Comet
+	}
+}
+
+on_yearly_pulse = {
+	events = {
+		ACS.11 # Khalga go around the world every year, searching evil characters - select the target
+		ACS.22 # Control Vee age. No more than 33
+	}
+}
+
+on_bi_yearly_pulse = {
+	events = {
+		ACS.25 # Vee cultivates many possible receptors
+	}
+}
+
+on_five_year_pulse = {
+	events = {
+		ACS.202 # Have AI characters join new societies
+	}
+}
+
+on_adolescence_pulse = {
+	events = {
+		ACS.20
+	}
+}
+
+on_death = {
+	events = {
+		ACS.16 # Resurrect Khalga if He dies
+		ACS.23 # Select a new child for Vee container
+	}
+}
+
+on_birth = {
+	events = {
+		ACS.29 # Gain sharingan as Vee child
+	}
+}

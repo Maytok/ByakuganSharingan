@@ -1,0 +1,16 @@
+had_pentaghast_fertility_ritual = {
+	fertility = 0.2
+	icon = 75
+}
+
+killed_a_sharingan = {
+	intrigue = 4
+	combat_rating = 2
+	icon = 81
+}
+
+lvl = {
+	combat_rating = 2
+	icon = 1
+}
+

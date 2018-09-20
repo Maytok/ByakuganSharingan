@@ -1,0 +1,29 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+
+pentaghast_society;The Pentaghast;Le Pentaghast;Die Pentaghast;;Los Pentaghast;;;;;;;;;x
+pentaghast_society_desc;Pendant description;;;;Los Pentaghast buscan el conocimiento y el poder a cualquier costo. venera a una figura mítica llamada "La Madre de Todo", quién parece ser la personificación del conocimiento entre ellos. No se sabe demasiado sobre sus prácticas y costumbres y la sociedad está envuelta en un halo de misterio.;;;;;;;;;x
+pentaghast_society_leader_desc;Supreme Leader;;;;Líder supremo;;;;;;;;;x
+currency_name_pentaghast_society;Influency;;;;Influencia;;;;;;;;;x
+pentaghast_rank_1_female;;;;;Nivel 1;;;;;;;;;x
+pentaghast_rank_2_female;;;;;Nivel 2;;;;;;;;;x
+pentaghast_rank_4_female;;;;;Nivel 4;;;;;;;;;x
+pentaghast_rank_3_female;;;;;Nivel 3;;;;;;;;;x
+pentaghast_rank_1_male;;;;;Nivel 1;;;;;;;;;x
+pentaghast_rank_2_male;;;;;Nivel 2;;;;;;;;;x
+pentaghast_rank_4_male;;;;;Nivel 4;;;;;;;;;x
+pentaghast_rank_3_male;;;;;Nivel 3;;;;;;;;;x
+
+sakya_society;The Sakya;;;;Los Sakya;;;;;;;;;x
+sakya_society_desc;The Sakya description;;;;Se recomienda precaución al averiguar sobre esta sociedad. No querrás sufrir un accidente inesperado.;;;;;;;;;x
+sakya_society_leader_desc;The Ancient One;L'ancien;Der Alte;;El Antiguo;;;;;;;;;x
+currency_name_sakya_society;Power;;;;Poder;;;;;;;;;x
+sakya_rank_1_female;;;;;Nivel 1;;;;;;;;;x
+sakya_rank_2_female;;;;;Nivel 2;;;;;;;;;x
+sakya_rank_4_female;;;;;Nivel 4;;;;;;;;;x
+sakya_rank_3_female;;;;;Nivel 3;;;;;;;;;x
+sakya_rank_1_male;;;;;Nivel 1;;;;;;;;;x
+sakya_rank_2_male;;;;;Nivel 2;;;;;;;;;x
+sakya_rank_4_male;;;;;Nivel 4;;;;;;;;;x
+sakya_rank_3_male;;;;;Nivel 3;;;;;;;;;x
+
+d_pentaghast_merc;;;;;Los Mercenarios Libres;;;;;;;;;x

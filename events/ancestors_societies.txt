@@ -1,0 +1,524 @@
+NAMESPACE = ACS
+
+# ACS.200 - Spawn some characters for Pentaghast and Sakya
+character_event = {
+    id = ACS.200
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        if = {
+            limit = {
+                has_character_flag = is_ancient_one
+            }
+            # Fill the tier 4 seats
+            set_variable = { which = count value = 2 }
+            while = {
+                limit = {
+                    check_variable = {
+                        which = count
+                        value = 1
+                    }
+                }
+                subtract_variable = {
+                    which = count
+                    value = 1
+                }
+                create_character = {
+                    random_traits = yes
+                    female = yes
+                }
+                new_character = { join_society = sakya_society society_rank_up = 3 character_event = { id = ACS.201 } }
+
+                create_character = {
+                    random_traits = yes
+                    female = no
+                }
+                new_character = { join_society = sakya_society society_rank_up = 3 character_event = { id = ACS.201 } }
+            }
+            # Fill the tier 3 seats
+            set_variable = { which = count value = 25 }
+            while = {
+                limit = {
+                    check_variable = {
+                        which = count
+                        value = 1
+                    }
+                }
+                subtract_variable = {
+                    which = count
+                    value = 1
+                }
+                create_character = {
+                    random_traits = yes
+                    female = yes
+                }
+                new_character = { join_society = sakya_society society_rank_up = 2 character_event = { id = ACS.201 } }
+            }
+            # Fill the tier 2 seats
+            set_variable = { which = count value = 25 }
+            while = {
+                limit = {
+                    check_variable = {
+                        which = count
+                        value = 1
+                    }
+                }
+                subtract_variable = {
+                    which = count
+                    value = 1
+                }
+                create_character = {
+                    random_traits = yes
+                    female = yes
+                }
+                new_character = { join_society = sakya_society society_rank_up = 1 character_event = { id = ACS.201 } }
+
+                create_character = {
+                    random_traits = yes
+                    female = no
+                }
+                new_character = { join_society = sakya_society society_rank_up = 1 character_event = { id = ACS.201 } }            
+            }
+
+            # Fill the tier 1 seats
+            set_variable = { which = count value = 50 }
+            while = {
+                limit = {
+                    check_variable = {
+                        which = count
+                        value = 1
+                    }
+                }
+                subtract_variable = {
+                    which = count
+                    value = 1
+                }
+                create_character = {
+                    random_traits = yes
+                    female = yes
+                }
+                new_character = { join_society = sakya_society character_event = { id = ACS.201 } }
+
+                create_character = {
+                    random_traits = yes
+                    female = no
+                }
+                new_character = { join_society = sakya_society character_event = { id = ACS.201 } }            
+            }  
+        }
+
+        # Fill the Pentaghast society
+        if = {
+            limit = {
+                has_character_flag = is_olaf
+            }
+            set_variable = { which = count value = 9 }
+            while = {
+                limit = {
+                    check_variable = {
+                        which = count
+                        value = 1
+                    }
+                }
+                subtract_variable = {
+                    which = count
+                    value = 1
+                }
+                create_character = {
+                    random_traits = yes
+                    female = yes
+                    culture = FROM
+                    religion = FROM                    
+                }
+                new_character = { join_society = pentaghast_society society_rank_up = 3 set_secret_religion = ishtar_religion }
+
+            }
+        }        
+    }
+}
+
+# ACS.201 - Decide destiny of the society members
+character_event = {
+    id = ACS.201
+    hide_window = yes
+    is_triggered_only = yes
+    
+    immediate = {
+        # Select a random character and move the agent to the court
+        random_playable_ruler = {
+            limit = {
+                adventurer = no
+                is_landed = yes
+            }           
+            character_event = { id = ACS.215 }
+        }
+    }
+}
+
+# ACS.202 - Force IA to join societies - Select only courtiers. Chance to scale up
+character_event = {
+    id = ACS.202
+    hide_window = yes
+    
+    only_rulers = yes
+    is_triggered_only = yes
+    
+    
+    immediate = {
+        any_courtier = {
+            limit = {
+                ai = yes
+                prisoner = no
+                NOT = { trait = incapable }
+                is_adult = yes
+                is_in_society = no
+                controls_religion = no
+                block_general_event_trigger = no
+            }
+            character_event = { id = ACS.203 }
+        }
+    }
+}
+
+
+# ACS.203 - Evaluate conditions to join the society
+character_event = {
+    id = ACS.203
+    hide_window = yes
+    
+    is_triggered_only = yes
+    
+    immediate = {
+        random_list = {
+            95 = { # do nothing
+            }
+            5 = { # try to join a society
+                modifier = {
+                    factor = 2
+                    higher_tier_than = BARON
+                }
+                
+                random_list = {
+                    700 = { } # Fall back dead weight
+                    100 = {
+                        trigger = {
+                            can_join_society = pentaghast_society
+                        }
+                        modifier = {
+                            factor = 3
+                            OR = {
+                                trait = schemer
+                                trait = elusive_shadow
+                                trait = deceitful
+                                trait = ambitious
+                                intrigue = 18
+                            }
+                        }
+                        join_society = pentaghast_society
+                        random_list = { # Artificially increase society influence for balance purposes
+                            75 = {
+                                modifier = {
+                                    factor = 0
+                                    society_influence >= 30
+                                }
+                                add_mission_succeed_influence_effect = yes
+                            }
+                            25 = {
+                            }
+                        }
+                        if = {
+                            limit = {
+                                NOT = {
+                                    society = {
+                                        any_society_member = {
+                                            is_society_grandmaster = yes
+                                        }
+                                    }
+                                }
+                            }
+                            set_society_grandmaster = yes
+                        }
+                    }
+                    100 = {
+                        trigger = {
+                            can_join_society = sakya_society
+                        }
+                        modifier = {
+                            factor = 3
+                            OR = {
+                                trait = schemer
+                                trait = elusive_shadow
+                                trait = deceitful
+                                trait = ambitious
+                                intrigue = 18
+                            }
+                        }
+                        join_society = sakya_society
+                        random_list = { # Artificially increase society influence for balance purposes
+                            75 = {
+                                modifier = {
+                                    factor = 0
+                                }
+                                modifier = {
+                                    factor = 0
+                                    society_influence >= 30
+                                }
+                                add_mission_succeed_influence_effect = yes
+                            }
+                            25 = {
+                            }
+                        }
+                        if = {
+                            limit = {
+                                NOT = {
+                                    society = {
+                                        any_society_member = {
+                                            is_society_grandmaster = yes
+                                        }
+                                    }
+                                }
+                            }
+                            set_society_grandmaster = yes
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+###########################################
+# Pentaghast Orgy - Hidden start
+# Fired by a decision
+###########################################
+# ACS.204 - Sellect all members of the society
+character_event = {
+    id = ACS.204
+    hide_window = yes    
+    is_triggered_only = yes
+    only_capable = yes
+    prisoner = no
+    is_in_society = yes
+
+    immediate = {
+        # First look for someone at court
+        pentaghast_society = {
+            any_society_member = {
+                limit = {
+                    is_incapable = no
+                    prisoner = no
+                    NOT = { is_inaccessible_trigger = yes }
+                    NOT = { trait = celibate }                    
+                    is_ill = no
+                    NOT = { character = ROOT }
+                    in_command = no
+                    in_battle = no
+                }
+                character_event = { id = ACS.205 }
+                clr_character_flag = had_pentaghast_ritual
+            }
+        }
+        ROOT = { character_event = { id = ACS.207 days = 5 } }
+    }
+}
+
+# ACS.205 - Pentaghast members receive the invitation
+# ROOT - Invitado - FROM - Maestro
+character_event = {
+    id = ACS.205
+    picture = GFX_evt_sultan
+    border = GFX_event_normal_frame_intrigue
+    is_triggered_only = yes    
+    desc = EVTDESC_MNM_20002
+
+    option = {
+        name = OK # Of course
+        ai_chance = {
+            factor = 100
+        }
+        character_event = { id = ACS.206 tooltip = EVT_TT_ACS206 }
+    }
+}
+
+# ACS.206 - Pentaghast member ritual
+character_event = {
+    id = ACS.206
+    hide_window = yes    
+    is_triggered_only = yes
+    
+    immediate = {
+        set_character_flag = had_pentaghast_ritual
+        random_list = {            
+            100 = { # Pollinate from a random male member of the society
+                modifier = {
+                    factor = 0
+                    is_female = no
+                }
+                character_event = { id = ACS.212 }
+            }
+            100 = { # Gain the "lustful" 
+                modifier = {
+                    factor = 0
+                    trait = lustful
+                }
+                add_trait = lustful
+            }
+        }
+    }
+}
+
+# ACS.207 - Select a random society member for sacrifice and/or Vee impregnation
+character_event = {
+    id = ACS.207
+    hide_window = yes    
+    is_triggered_only = yes
+    only_capable = yes
+    prisoner = no
+    is_in_society = yes
+
+    immediate = {
+        # Search for a random candidate to make the sacrifice
+        society = {
+            random_society_member = {
+                limit = {
+                    is_female = no
+                }
+                set_character_flag = selected_for_fertility_ritual
+                character_event = { id = ACS.208 }
+            }
+        }
+    }
+}
+
+# ACS.208 - Select Vee from the marked for ritual
+character_event = {
+    id = ACS.208
+    hide_window = yes    
+    is_triggered_only = yes
+
+    immediate = {
+        random_character = {
+            limit = {
+                is_female = yes
+                trait = syrena
+                age = 18
+            }
+            character_event = { id = ACS.209 }
+        }
+    }
+}
+
+
+# ACS.209 - Pollinate Vee with the random male member
+character_event = {
+    id = ACS.209
+    hide_window = yes    
+    is_triggered_only = yes
+
+    immediate = {
+        if = {
+            limit = {
+                is_pregnant = no
+            }
+            impregnate_cuckoo = FROM
+        }
+        FROM = { character_event = { id = ACS.210 } }
+
+    }
+}
+
+# ACS.210 - Sacrifice the member
+character_event = {
+    id = ACS.210
+    hide_window = yes    
+    is_triggered_only = yes
+
+    immediate = {
+        pentaghast_society = {
+            any_society_member = {
+                limit = {
+                    NOT = { has_character_flag = selected_for_fertility_ritual }
+                }
+            }
+            character_event = { id = ACS.211 }
+        }
+        ROOT = {            
+            death = { death_reason = death_murder_unknown killer = FROMFROM }
+        }        
+    }
+}
+
+# ACS.211 - Notification to all members
+character_event = {
+    id = ACS.211   
+    is_triggered_only = yes
+    picture = GFX_evt_sultan
+    border = GFX_event_normal_frame_intrigue
+    desc = EVTDESC_ACS.211
+
+
+    option = {
+        name = OK # Of course
+        ai_chance = {
+            factor = 100
+        }
+    }
+}
+
+
+# ACS.212 - Select a random male for pollination - (other members)
+character_event = {
+    id = ACS.212   
+    is_triggered_only = yes
+    hide_window = yes
+
+    immediate = {
+        pentaghast_society = {
+            random_society_member = {
+                limit = {
+                    is_female = no
+                }
+                character_event = { id = ACS.213 }
+            }
+        }
+    }
+}
+
+# ACS.213 - ping back to the female
+character_event = {
+    id = ACS.213   
+    is_triggered_only = yes
+    hide_window = yes
+
+    immediate = {
+        FROM = { character_event = { id = ACS.214 } }
+    }
+}
+
+# ACS.214 - ping back to the female
+character_event = {
+    id = ACS.214  
+    is_triggered_only = yes
+    hide_window = yes
+
+    immediate = {
+        ROOT = { impregnate_cuckoo = FROM }
+    }
+}
+
+# ACS.215 - Move the agent to the character court
+character_event = {
+    id = ACS.215
+    hide_window = yes    
+    is_triggered_only = yes
+
+    immediate = {
+        FROM = {
+            move_character = ROOT
+            culture = ROOT
+            religion = ROOT
+        }
+    }
+}

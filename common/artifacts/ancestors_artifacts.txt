@@ -1,0 +1,14 @@
+jewel_of_soul = {
+	stacking = yes
+	flags = { ancient jewel }
+	picture = "GFX_jewel_of_soul"
+	slot = weapon
+}
+
+jewel_of_bless = {
+	stacking = yes
+	flags = { ancient jewel }
+	picture = "GFX_jewel_of_bless"
+	slot = weapon
+}
+
