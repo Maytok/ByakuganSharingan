@@ -854,6 +854,7 @@ character_event = {
 
     trigger = {
         NOT = { has_character_flag = in_nomadic_migration }
+        is_landed = no
     }
 
     immediate = {
