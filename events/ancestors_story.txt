@@ -49,8 +49,8 @@ character_event = {
         }
         new_character = {                        
             set_character_flag = is_senua
-            # character_event = { id = ACS.7 days = 2 }
-            character_event = { id = ACS.7 days = 266 }
+            character_event = { id = ACS.7 days = 2 }
+            # character_event = { id = ACS.7 days = 266 }
             dynasty = 300001
             join_society = pentaghast_society
             set_secret_religion = ishtar_religion
@@ -94,12 +94,32 @@ character_event = {
         new_character = {
             set_character_flag = is_ancient_one
             join_society = sakya_society
-            set_society_grandmaster = yes
-            b_alsitah = {
-                grant_title = PREV
+            set_society_grandmaster = yes 
+            culture = khazar
+            dynasty = 300000
+            create_title = {
+                tier = KING
+                landless = yes
+                temporary = no
+                name = "THE_SAKJE"
+                holder = THIS
+                culture = THIS
+            }
+            spawn_unit = {
+                owner = THIS
+                province = 624
+                home = 624
+                troops = {
+                    knights = { 10 10 }
+                    horse_archers = { 100 100 }
+                }
+                earmark = tilda_starter
+                attrition = 0.0
+                maintenance_multiplier = 0.0
             }
             set_defacto_liege = THIS
             character_event = { id = ACS.200 }
+            character_event = { id = ACS.30 } # Traveling around the world
         }
     }    
 }
@@ -326,7 +346,7 @@ character_event = {
         name = OK
         ai_chance = { factor = 100 }
         FROM = {
-            move_character = ROOT            
+            move_character = ROOT
         }
         prestige = 10
         wealth = 17
@@ -501,7 +521,7 @@ character_event = {
 
     immediate = {
         random_character = {
-            limit = { has_landed_title = b_alsitah }
+            limit = { has_character_flag = is_ancient_one }
             character_event = { id = ACS.10 }
         }
     }
@@ -787,5 +807,187 @@ character_event = {
             add_trait = sharingan
             set_character_flag = direct_sharingan
         }
+    }
+}
+
+
+# ACS.30 - Set Tilda clan to a random steppe province
+character_event = {
+    id = ACS.30
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        random_province = {
+            limit = {
+                region = world_steppe
+                terrain = steppe
+            }
+            holder_scope = {
+                spawn_unit = {
+                    owner = ROOT
+                    province = PREV
+                    home = PREV
+                    troops = {
+                        knights = { 5 5 }
+                        horse_archers = { 100 100 }
+                    }
+                    earmark = tilda_troops_a
+                    attrition = 0.0
+                    maintenance_multiplier = 0.0
+                }
+            }
+        }
+        set_character_flag = moved_tilda
+        disband_event_forces = tilda_starter
+    }
+}
+
+######################################################
+# ACS.31 - BEGIN Periodical event for nomadic Tilda ##
+######################################################
+character_event = {
+    id = ACS.31
+    hide_window = yes
+    is_triggered_only = yes
+    has_character_flag = is_ancient_one
+
+    trigger = {
+        NOT = { has_character_flag = in_nomadic_migration }
+    }
+
+    immediate = {
+        set_character_flag = in_nomadic_migration
+        set_character_flag = tilda_first_period
+        clr_character_flag = tilda_fourth_period
+        location = {
+            random_neighbor_province = {
+                limit = {
+                    region = world_steppe                    
+                }
+                holder_scope = {
+                    spawn_unit = {
+                        owner = ROOT
+                        province = PREV
+                        home = PREV
+                        troops = {
+                            knights = { 5 5 }
+                            horse_archers = { 100 100 }
+                        }
+                        earmark = tilda_troops_b
+                        attrition = 0.0
+                        maintenance_multiplier = 0.0
+                    }
+                }
+            }            
+        }
+        disband_event_forces = tilda_troops_a
+        disband_event_forces = tilda_troops_e
+        ROOT = { character_event = { id = ACS.32 days = 60} }             
+    }
+}
+
+# ACS.32 - Periodical event for nomadic Tilda
+character_event = {
+    id = ACS.32
+    hide_window = yes
+    is_triggered_only = yes    
+
+    immediate = {
+        clr_character_flag = tilda_first_period
+        set_character_flag = tilda_second_period
+        location = {
+            random_neighbor_province = {
+                limit = {
+                    region = world_steppe
+                }
+                holder_scope = {
+                    spawn_unit = {
+                        owner = ROOT
+                        province = PREV
+                        home = PREV
+                        troops = {
+                            knights = { 5 5 }
+                            horse_archers = { 100 100 }
+                        }
+                        earmark = tilda_troops_c
+                        attrition = 0.0
+                        maintenance_multiplier = 0.0
+                    }
+                }
+            }            
+        }
+        disband_event_forces = tilda_troops_b
+        ROOT = { character_event = { id = ACS.33 days = 60} }             
+    }
+}
+
+# ACS.33 - Periodical event for nomadic Tilda
+character_event = {
+    id = ACS.33
+    hide_window = yes
+    is_triggered_only = yes    
+
+    immediate = {
+        clr_character_flag = tilda_second_period
+        set_character_flag = tilda_third_period
+        location = {
+            random_neighbor_province = {
+                limit = {
+                    region = world_steppe
+                }
+                holder_scope = {
+                    spawn_unit = {
+                        owner = ROOT
+                        province = PREV
+                        home = PREV
+                        troops = {
+                            knights = { 5 5 }
+                            horse_archers = { 100 100 }
+                        }
+                        earmark = tilda_troops_d
+                        attrition = 0.0
+                        maintenance_multiplier = 0.0
+                    }
+                }
+            }            
+        }
+        disband_event_forces = tilda_troops_c
+        ROOT = { character_event = { id = ACS.34 days = 60} }             
+    }
+}
+
+# ACS.34 - Periodical event for nomadic Tilda
+character_event = {
+    id = ACS.34
+    hide_window = yes
+    is_triggered_only = yes    
+
+    immediate = {
+        clr_character_flag = tilda_third_period
+        set_character_flag = tilda_fourth_period       
+        location = {
+            random_neighbor_province = {
+                limit = {
+                    region = world_steppe
+                }
+                holder_scope = {
+                    spawn_unit = {
+                        owner = ROOT
+                        province = PREV
+                        home = PREV
+                        troops = {
+                            knights = { 5 5 }
+                            horse_archers = { 100 100 }
+                        }
+                        earmark = tilda_troops_e
+                        attrition = 0.0
+                        maintenance_multiplier = 0.0
+                    }
+                }
+            }            
+        }
+        disband_event_forces = tilda_troops_d
+        clr_character_flag = in_nomadic_migration
     }
 }
