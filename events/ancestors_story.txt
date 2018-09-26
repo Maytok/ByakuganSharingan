@@ -2,597 +2,598 @@ NAMESPACE = ACS
 
 # ACS.1 - Tiamat comet in the sky
 narrative_event = {
-    id = ACS.1
-    title = EVTTITLE.ACS.1
-    desc = EVTDESC.ACS.1
-    is_triggered_only = yes    
-    ai = no
-    picture = GFX_evt_tiamat
+	id = ACS.1
+	title = EVTTITLE.ACS.1
+	desc = EVTDESC.ACS.1
+	is_triggered_only = yes    
+	ai = no
+	picture = GFX_evt_tiamat
 
-    trigger = {
-    	NOT = { has_global_flag = comet_tiamat }
-    }
-    
-    option = {
-        name = EVTOPTA.ACS.1
-        set_global_flag = comet_tiamat
-        character_event = { id = ACS.2 days = 13 }
-        character_event = { id = ACS.3 days = 36 }
-    }
+	trigger = {
+		NOT = { has_global_flag = comet_tiamat }
+	}
+	
+	option = {
+		name = EVTOPTA.ACS.1
+		set_global_flag = comet_tiamat
+		character_event = { id = ACS.2 days = 13 }
+		character_event = { id = ACS.3 days = 36 }
+	}
 }
 
 # ACS.2 - Spawn Senua, Olaf and Tilda
 character_event = {
-    id = ACS.2
-    title = EVTTITLE.ACS.2
-    desc = EVTDESC.ACS.2
-    picture = GFX_evt_courtiers_talking
-    is_triggered_only = yes
+	id = ACS.2
+	title = EVTTITLE.ACS.2
+	desc = EVTDESC.ACS.2
+	picture = GFX_evt_courtiers_talking
+	is_triggered_only = yes
 
-    option = {
-        name = EVTOPTA.ACS.2
-        create_character = {
-            name = Senua
-            dna="senuahellbd"
-            female = yes
-            age = 17
-            culture = pictish
-            religion = FROM
-            trait = fair
-            trait = stressed
-            trait = scarred
-            trait = strong
-            trait = mystic
-            trait = wroth
-            trait = paranoid
-            health = 20
-        }
-        new_character = {                        
-            set_character_flag = is_senua
-            character_event = { id = ACS.7 days = 2 }
-            # character_event = { id = ACS.7 days = 266 }
-            dynasty = 300001
-            join_society = pentaghast_society
-            set_secret_religion = ishtar_religion
-        }
-        create_character = {
-            name = Olaf
-            age = 38
-            culture = swedish
-            religion = FROM
-            trait = cruel
-            trait = ambitious
-            trait = elusive_shadow
-            trait = scarred
-            trait = bastard
-            trait = shrewd
-            trait = hunter
-            trait = diligent
-            trait = lustful
-            health = 10
-        }
-        new_character = {
-            set_character_flag = is_olaf
-            join_society = pentaghast_society
-            set_society_grandmaster = yes
-            character_event = { id = ACS.200 }
-            set_secret_religion = ishtar_religion
-        }
-        create_character = {
-            name = Tilda
-            dna="ancientonee"
-            female = yes
-            age = 33
-            culture = scottish
-            religion = buddhist
-            trait = immortal
-            trait = mystic
-            trait = quick
-            trait = strong
-            trait = shrewd
-        }
-        new_character = {
-            set_character_flag = is_ancient_one
-            join_society = sakya_society
-            set_society_grandmaster = yes 
-            culture = khazar
-            dynasty = 300000
-            create_title = {
-                tier = KING
-                landless = yes
-                temporary = no
-                name = "THE_SAKJE"
-                holder = THIS
-                culture = THIS
-            }
-            spawn_unit = {
-                owner = THIS
-                province = 624
-                home = 624
-                troops = {
-                    knights = { 10 10 }
-                    horse_archers = { 100 100 }
-                }
-                earmark = tilda_starter
-                attrition = 0.0
-                maintenance_multiplier = 0.0
-            }
-            set_defacto_liege = THIS
-            character_event = { id = ACS.200 }
-            character_event = { id = ACS.30 } # Traveling around the world
-        }
-    }    
+	option = {
+		name = EVTOPTA.ACS.2
+		create_character = {
+			name = Senua
+			dna="senuahellbd"
+			female = yes
+			age = 17
+			culture = pictish
+			religion = FROM
+			trait = fair
+			trait = stressed
+			trait = scarred
+			trait = strong
+			trait = mystic
+			trait = wroth
+			trait = paranoid
+			health = 20
+		}
+		new_character = {                        
+			set_character_flag = is_senua
+			character_event = { id = ACS.7 days = 2 }
+			# character_event = { id = ACS.7 days = 266 }
+			dynasty = 300001
+			join_society = pentaghast_society
+			set_secret_religion = ishtar_religion
+		}
+		create_character = {
+			name = Olaf
+			age = 38
+			culture = swedish
+			religion = FROM
+			trait = cruel
+			trait = ambitious
+			trait = elusive_shadow
+			trait = scarred
+			trait = bastard
+			trait = shrewd
+			trait = hunter
+			trait = diligent
+			trait = lustful
+			health = 10
+		}
+		new_character = {
+			set_character_flag = is_olaf
+			join_society = pentaghast_society
+			set_society_grandmaster = yes
+			character_event = { id = ACS.200 }
+			set_secret_religion = ishtar_religion
+		}
+		create_character = {
+			name = Tilda
+			dna="ancientonee"
+			female = yes
+			age = 33
+			culture = scottish
+			religion = buddhist
+			trait = immortal
+			trait = mystic
+			trait = quick
+			trait = strong
+			trait = shrewd
+		}
+		new_character = {
+			set_character_flag = is_ancient_one
+			join_society = sakya_society
+			set_society_grandmaster = yes 
+			culture = khazar
+			dynasty = 300000
+			create_title = {
+				tier = KING
+				landless = yes
+				temporary = no
+				name = "THE_SAKJE"
+				holder = THIS
+				culture = THIS
+			}
+			spawn_unit = {
+				owner = THIS
+				province = 624
+				home = 624
+				troops = {
+					knights = { 10 10 }
+					horse_archers = { 100 100 }
+				}
+				earmark = tilda_starter
+				attrition = 0.0
+				maintenance_multiplier = 0.0
+			}
+			set_defacto_liege = THIS
+			character_event = { id = ACS.200 }
+			character_event = { id = ACS.30 } # Traveling around the world
+		}
+		set_global_flag = spawned_tilda
+	}    
 }
 
 # ACS.3 - Select Olaf for ping event
 character_event = {
-    id = ACS.3
-    hide_window = yes
-    is_triggered_only = yes
+	id = ACS.3
+	hide_window = yes
+	is_triggered_only = yes
 
-    immediate = {
-        random_courtier = {
-            limit = {
-                has_character_flag = is_olaf
-            }
-            character_event = { id = ACS.4 }
-        }        
-    }
+	immediate = {
+		random_courtier = {
+			limit = {
+				has_character_flag = is_olaf
+			}
+			character_event = { id = ACS.4 }
+		}        
+	}
 }
 
 # ACS.4 - ROOT: Olaf - Ping event
 character_event = {
-    id = ACS.4
-    hide_window = yes
-    is_triggered_only = yes
+	id = ACS.4
+	hide_window = yes
+	is_triggered_only = yes
 
-    immediate = {
-        FROM = {
-            character_event = { id = ACS.5 }
-        }
-    }
+	immediate = {
+		FROM = {
+			character_event = { id = ACS.5 }
+		}
+	}
 }
 
 # ACS.5 - Spawn an army for Olaf
 character_event = {
-    id = ACS.5
-    desc = EVTDESC.ACS.3
-    picture = GFX_evt_courtiers_talking
-    is_triggered_only = yes
+	id = ACS.5
+	desc = EVTDESC.ACS.3
+	picture = GFX_evt_courtiers_talking
+	is_triggered_only = yes
 
-    immediate = {
-        ROOT = {
-            if = {
-                limit = { is_nomadic = yes }
-                clan_title = {
-                    create_title = {
-                        tier = DUKE
-                        name = DYNAMIC_MERCENARY_COMPANY
-                        landless = yes
-                        temporary = yes
-                        adventurer = yes
-                        custom_created = yes
-                        culture = FROM
-                        holder = FROM
-                        base_title = THIS
-                        mercenary = yes
-                        ruler = "CAPTAIN"
-                        ruler_female = "CAPTAIN"
-                        foa = "CAPTAIN_FOA"
-                    }
-                }
-            }
-            if = {
-                limit = { is_nomadic = no }
-                primary_title = {
-                    create_title = {
-                        tier = DUKE
-                        name = DYNAMIC_MERCENARY_COMPANY
-                        landless = yes
-                        temporary = yes
-                        adventurer = yes
-                        custom_created = yes
-                        culture = FROM
-                        holder = FROM
-                        base_title = THIS
-                        mercenary = yes
-                        ruler = "CAPTAIN"
-                        ruler_female = "CAPTAIN"
-                        foa = "CAPTAIN_FOA"
-                    }
-                }
-            }
-            FROM = {
-                set_defacto_liege = THIS
-                set_character_flag = is_mercenary_leader
-                add_trait = adventurer
-                add_character_modifier = { modifier = started_mercenary_company months = 30 }
-            }
-            character_event = { id = ACS.6 }
-        }        
-    }
+	immediate = {
+		ROOT = {
+			if = {
+				limit = { is_nomadic = yes }
+				clan_title = {
+					create_title = {
+						tier = DUKE
+						name = DYNAMIC_MERCENARY_COMPANY
+						landless = yes
+						temporary = yes
+						adventurer = yes
+						custom_created = yes
+						culture = FROM
+						holder = FROM
+						base_title = THIS
+						mercenary = yes
+						ruler = "CAPTAIN"
+						ruler_female = "CAPTAIN"
+						foa = "CAPTAIN_FOA"
+					}
+				}
+			}
+			if = {
+				limit = { is_nomadic = no }
+				primary_title = {
+					create_title = {
+						tier = DUKE
+						name = DYNAMIC_MERCENARY_COMPANY
+						landless = yes
+						temporary = yes
+						adventurer = yes
+						custom_created = yes
+						culture = FROM
+						holder = FROM
+						base_title = THIS
+						mercenary = yes
+						ruler = "CAPTAIN"
+						ruler_female = "CAPTAIN"
+						foa = "CAPTAIN_FOA"
+					}
+				}
+			}
+			FROM = {
+				set_defacto_liege = THIS
+				set_character_flag = is_mercenary_leader
+				add_trait = adventurer
+				add_character_modifier = { modifier = started_mercenary_company months = 30 }
+			}
+			character_event = { id = ACS.6 }
+		}        
+	}
 
-    option = {
-        name = OK
-    }
+	option = {
+		name = OK
+	}
 }
 
 # ACS.6 - Olaf leaves the court
 character_event = {
-    id = ACS.6
-    desc = EVTDESC.ACS.6
-    picture = GFX_evt_courtiers_talking
-    is_triggered_only = yes
+	id = ACS.6
+	desc = EVTDESC.ACS.6
+	picture = GFX_evt_courtiers_talking
+	is_triggered_only = yes
 
-    option = {
-        name = OK
-    }
+	option = {
+		name = OK
+	}
 }
 
 
 # ACS.7 - Create Vee and Khalga
 character_event = {
-    id = ACS.7
-    hide_window = yes
-    is_triggered_only = yes
+	id = ACS.7
+	hide_window = yes
+	is_triggered_only = yes
 
-    option = {
-        name = OK
-        create_character = {
-            name = Vee
-            female = yes
-            age = 0
-            culture = ROOT
-            religion = ROOT
-            trait = fair
-            trait = twin
-            trait = genius            
-            trait = sharingan
-            trait = syrena
-        }
-        new_character = {
-            set_mother = ROOT
-            set_real_father = FROM       
-            set_character_flag = is_vee
-            set_character_flag = originated_from_chinese_court # to prevent to go to China
-            set_focus = focus_ch_heritage
-            dynasty = 300001
-        }
+	option = {
+		name = OK
+		create_character = {
+			name = Vee
+			female = yes
+			age = 0
+			culture = ROOT
+			religion = ROOT
+			trait = fair
+			trait = twin
+			trait = genius            
+			trait = sharingan
+			trait = syrena
+		}
+		new_character = {
+			set_mother = ROOT
+			set_real_father = FROM       
+			set_character_flag = is_vee
+			set_character_flag = originated_from_chinese_court # to prevent to go to China
+			set_focus = focus_ch_heritage
+			dynasty = 300001
+		}
 
-        # Khalga born
-        create_character = {
-            name = Khalga
-            age = 0
-            culture = ROOT
-            religion = ROOT
-            trait = fair
-            trait = twin
-            trait = genius
-            trait = byakugan
-            trait = strong
-            trait = khalga_trait
-            trait = khalga_pilgrim
-        }
-        new_character = {
-            set_mother = ROOT
-            set_real_father = FROM          
-            set_character_flag = is_khalga
-            set_character_flag = originated_from_chinese_court # to prevent to go to China
-            set_focus = focus_ch_heritage
-            set_character_flag = wolf_blood_first_generation
-            add_character_modifier = {
-                name = wolf_child
-                duration = -1
-            }
-            dynasty = 300000
-        }
-        liege = { # Player is notified
-            character_event = { id = ACS.8 days = 1 }          
-        }
-    }
+		# Khalga born
+		create_character = {
+			name = Khalga
+			age = 0
+			culture = ROOT
+			religion = ROOT
+			trait = fair
+			trait = twin
+			trait = genius
+			trait = byakugan
+			trait = strong
+			trait = khalga_trait
+			trait = khalga_pilgrim
+		}
+		new_character = {
+			set_mother = ROOT
+			set_real_father = FROM          
+			set_character_flag = is_khalga
+			set_character_flag = originated_from_chinese_court # to prevent to go to China
+			set_focus = focus_ch_heritage
+			set_character_flag = wolf_blood_first_generation
+			add_character_modifier = {
+				name = wolf_child
+				duration = -1
+			}
+			dynasty = 300000
+		}
+		liege = { # Player is notified
+			character_event = { id = ACS.8 days = 1 }          
+		}
+	}
 }
 
 # ACS.8 - Player is notified about the twins
 character_event = {
-    id = ACS.8
-    title = EVTTITLE_ACS_8
-    desc = EVTDESC_ACS_8
-    picture = GFX_evt_birth
-    border = GFX_event_normal_frame_intrigue
-    is_triggered_only = yes
+	id = ACS.8
+	title = EVTTITLE_ACS_8
+	desc = EVTDESC_ACS_8
+	picture = GFX_evt_birth
+	border = GFX_event_normal_frame_intrigue
+	is_triggered_only = yes
 
-    option = {
-        name = OK
-        ROOT = {            
-            character_event = { id = ACS.9 days = 15}
-        }       
-    }
+	option = {
+		name = OK
+		ROOT = {            
+			character_event = { id = ACS.9 days = 15}
+		}       
+	}
 }
 
 # ACS.9 - Khalga flies to a foreign court
 character_event = {
-    id = ACS.9
-    title = EVTTITLE_ACS_9
-    desc = EVTDESC_ACS_9
-    picture = GFX_evt_machines_of_war
-    border = GFX_event_normal_frame_intrigue
-    is_triggered_only = yes
+	id = ACS.9
+	title = EVTTITLE_ACS_9
+	desc = EVTDESC_ACS_9
+	picture = GFX_evt_machines_of_war
+	border = GFX_event_normal_frame_intrigue
+	is_triggered_only = yes
 
-    immediate = {
-        add_trait = stressed
-        random_vassal = {
-            death = {
-                death_reason = death_murder_unknown
-            }
-        }
-    }
+	immediate = {
+		add_trait = stressed
+		random_vassal = {
+			death = {
+				death_reason = death_murder_unknown
+			}
+		}
+	}
 
-    option = {
-        name = EVTOPTA_ACS_9
-        random_courtier = {
-            limit = { has_character_flag = is_khalga }
-            character_event = { id = ACS.18 }
-        }
-    }
+	option = {
+		name = EVTOPTA_ACS_9
+		random_courtier = {
+			limit = { has_character_flag = is_khalga }
+			character_event = { id = ACS.18 }
+		}
+	}
 }
 
 # ACS.10 - Al-Sitah holder receives Khalga
 character_event = {
-    id = ACS.10
-    hide_window = yes    
-    is_triggered_only = yes
-    
-    option = {
-        name = OK
-        ai_chance = { factor = 100 }
-        FROM = {
-            move_character = ROOT
-        }
-        prestige = 10
-        wealth = 17
-    }
+	id = ACS.10
+	hide_window = yes    
+	is_triggered_only = yes
+	
+	option = {
+		name = OK
+		ai_chance = { factor = 100 }
+		FROM = {
+			move_character = ROOT
+		}
+		prestige = 10
+		wealth = 17
+	}
 }
 
 # ACS.11 - Khalga go around the world every year, kills random character. Select the character
 character_event = {
-    id = ACS.11
-    hide_window = yes    
-    is_triggered_only = yes
-    has_character_flag = is_khalga
-    min_age = 16
+	id = ACS.11
+	hide_window = yes    
+	is_triggered_only = yes
+	has_character_flag = is_khalga
+	min_age = 16
 
-    immediate = {       
-        random_playable_ruler = {
-            limit = {
-                adventurer = no
-                is_landed = yes 
-                is_married = yes 
-                age = 18
-                prisoner = no
-            }           
-            character_event = { id = ACS.12 days = 2 }
-        }        
-    }
+	immediate = {       
+		random_playable_ruler = {
+			limit = {
+				adventurer = no
+				is_landed = yes 
+				is_married = yes 
+				age = 18
+				prisoner = no
+			}           
+			character_event = { id = ACS.12 days = 2 }
+		}        
+	}
 }
 
 # ACS.12 - Khalga moves to the foreign court
 character_event = {
-    id = ACS.12
-    hide_window = yes    
-    is_triggered_only = yes
+	id = ACS.12
+	hide_window = yes    
+	is_triggered_only = yes
 
-    immediate = {
-        FROM = {
-            move_character = ROOT  
-            character_event = { id = ACS.13 days = 5 }
-            character_event = { id = ACS.14 days = 1 }
-        }
-    }
+	immediate = {
+		FROM = {
+			move_character = ROOT  
+			character_event = { id = ACS.13 days = 5 }
+			character_event = { id = ACS.14 days = 1 }
+		}
+	}
 }
 
 # ACS.13 - Khalga assassinates the host
 character_event = {
-    id = ACS.13
-    hide_window = yes    
-    is_triggered_only = yes
-    
-    immediate = {
-        host = {
-            random_list = {
-                10 = {
-                    death = { death_reason = death_murder_unknown killer = FROMFROM }
-                }
-                10 = {
-                    death = { death_reason = death_murder_unknown_beheading killer = FROMFROM }
-                }
-                10 = {
-                    death = { death_reason = death_murder_unknown_fall killer = FROMFROM }
-                }
-                10 = {
-                    death = { death_reason = death_murder_unknown_drowning killer = FROMFROM }
-                }
-                10 = {
-                    death = { death_reason = death_murder_unknown_snakes killer = FROMFROM }
-                }
-                10 = {
-                    death = { death_reason = death_murder_unknown_butchered killer = FROMFROM }
-                }
-                10 = {
-                    death = { death_reason = death_murder_unknown_arrow killer = FROMFROM }
-                }
-                5 = {
-                    death = { death_reason = death_murder_unknown_strangle killer = FROMFROM }
-                }
-                5 = {
-                    death = { death_reason = death_murder_unknown_fear killer = FROMFROM }
-                }
-                5 = {
-                    death = { death_reason = death_murder_unknown_lightning killer = FROMFROM }
-                }
-                5 = {
-                    death = { death_reason = death_murder_unknown_combustion killer = FROMFROM }
-                }
-                5 = {
-                    death = { death_reason = death_murder_unknown_crows killer = FROMFROM }
-                }
-                5 = {
-                    death = { death_reason = death_murder_unknown_possessed_fall killer = FROMFROM }
-                }
-            }
-            
-        }
-    }
+	id = ACS.13
+	hide_window = yes    
+	is_triggered_only = yes
+	
+	immediate = {
+		host = {
+			random_list = {
+				10 = {
+					death = { death_reason = death_murder_unknown killer = FROMFROM }
+				}
+				10 = {
+					death = { death_reason = death_murder_unknown_beheading killer = FROMFROM }
+				}
+				10 = {
+					death = { death_reason = death_murder_unknown_fall killer = FROMFROM }
+				}
+				10 = {
+					death = { death_reason = death_murder_unknown_drowning killer = FROMFROM }
+				}
+				10 = {
+					death = { death_reason = death_murder_unknown_snakes killer = FROMFROM }
+				}
+				10 = {
+					death = { death_reason = death_murder_unknown_butchered killer = FROMFROM }
+				}
+				10 = {
+					death = { death_reason = death_murder_unknown_arrow killer = FROMFROM }
+				}
+				5 = {
+					death = { death_reason = death_murder_unknown_strangle killer = FROMFROM }
+				}
+				5 = {
+					death = { death_reason = death_murder_unknown_fear killer = FROMFROM }
+				}
+				5 = {
+					death = { death_reason = death_murder_unknown_lightning killer = FROMFROM }
+				}
+				5 = {
+					death = { death_reason = death_murder_unknown_combustion killer = FROMFROM }
+				}
+				5 = {
+					death = { death_reason = death_murder_unknown_crows killer = FROMFROM }
+				}
+				5 = {
+					death = { death_reason = death_murder_unknown_possessed_fall killer = FROMFROM }
+				}
+			}
+			
+		}
+	}
 }
 
 # ACS.14 - Select a courtier for pollinate from Khalga
 character_event = {
-    id = ACS.14
-    hide_window = yes
-    is_triggered_only = yes
+	id = ACS.14
+	hide_window = yes
+	is_triggered_only = yes
 
-    immediate = {
-        host = {
-            random_spouse = {
-                limit = {
-                    is_pregnant = no
-                    is_female = yes
-                    is_incapable = no
-                    NOT = { has_character_flag = is_vee }
-                }
-                character_event = { id = ACS.15 }
-            }
-        }
-    }
+	immediate = {
+		host = {
+			random_spouse = {
+				limit = {
+					is_pregnant = no
+					is_female = yes
+					is_incapable = no
+					NOT = { has_character_flag = is_vee }
+				}
+				character_event = { id = ACS.15 }
+			}
+		}
+	}
 }
 
 # ACS.15 - The courtier is impregnated for Khalga
 character_event = {
-    id = ACS.15
-    hide_window = yes
-    is_triggered_only = yes
+	id = ACS.15
+	hide_window = yes
+	is_triggered_only = yes
 
-    immediate = {
-        set_character_flag = khalga_lover
-        impregnate_cuckoo = FROM
-    }
+	immediate = {
+		set_character_flag = khalga_lover
+		impregnate_cuckoo = FROM
+	}
 }
 
 # ACS.16 - Select a character to resurrect Khalga if he dies
 character_event = {
-    id = ACS.16
-    hide_window = yes
-    is_triggered_only = yes
+	id = ACS.16
+	hide_window = yes
+	is_triggered_only = yes
 
-    has_character_flag = is_khalga
+	has_character_flag = is_khalga
 
-    immediate = {
-        random_playable_ruler = {
-            limit = {
-                adventurer = no
-                is_landed = yes 
-                is_married = yes 
-                age = 18
-                is_female = no
-            }
-            character_event = { id = ACS.17 }
-        }
-    }
+	immediate = {
+		random_playable_ruler = {
+			limit = {
+				adventurer = no
+				is_landed = yes 
+				is_married = yes 
+				age = 18
+				is_female = no
+			}
+			character_event = { id = ACS.17 }
+		}
+	}
 }
 
 # ACS.17 - The character's wife is the new mother of Khalga
 character_event = {
-    id = ACS.17
-    hide_window = yes
-    is_triggered_only = yes
+	id = ACS.17
+	hide_window = yes
+	is_triggered_only = yes
 
-    immediate = {
-        random_spouse  = {
-            character_event = { id = ACS.19 }            
-        }        
-    }
+	immediate = {
+		random_spouse  = {
+			character_event = { id = ACS.19 }            
+		}        
+	}
 }
 
 
 # ACS.18 - Select AlSitah province holder
 character_event = {
-    id = ACS.18
-    hide_window = yes
-    is_triggered_only = yes
+	id = ACS.18
+	hide_window = yes
+	is_triggered_only = yes
 
-    immediate = {
-        random_character = {
-            limit = { has_character_flag = is_ancient_one }
-            character_event = { id = ACS.10 }
-        }
-    }
+	immediate = {
+		random_character = {
+			limit = { has_character_flag = is_ancient_one }
+			character_event = { id = ACS.10 }
+		}
+	}
 }
 
 # ACS.19 - Spawn a new instance of Khalga
 character_event = {
-    id = ACS.19
-    hide_window = yes
-    is_triggered_only = yes
+	id = ACS.19
+	hide_window = yes
+	is_triggered_only = yes
 
-    immediate = {
-        create_character = {
-            age = 0
-            culture = FROM
-            religion = FROM
-            trait = fair
-            trait = genius
-            trait = byakugan
-            trait = strong
-            trait = khalga_trait
-            trait = khalga_pilgrim
-        }
-        new_character = {
-            set_mother = ROOT           
-            set_character_flag = is_khalga
-            set_character_flag = originated_from_chinese_court # to prevent to go to China
-            set_focus = focus_ch_heritage
-            set_character_flag = wolf_blood_first_generation
-            add_character_modifier = {
-                name = wolf_child
-                duration = -1
-            }
-            # Khalga takes the essence, so kill the mother
-            mother = {
-                death = {
-                    death_reason = death_childbirth
-                }              
-            }
-        }
-    }
+	immediate = {
+		create_character = {
+			age = 0
+			culture = FROM
+			religion = FROM
+			trait = fair
+			trait = genius
+			trait = byakugan
+			trait = strong
+			trait = khalga_trait
+			trait = khalga_pilgrim
+		}
+		new_character = {
+			set_mother = ROOT           
+			set_character_flag = is_khalga
+			set_character_flag = originated_from_chinese_court # to prevent to go to China
+			set_focus = focus_ch_heritage
+			set_character_flag = wolf_blood_first_generation
+			add_character_modifier = {
+				name = wolf_child
+				duration = -1
+			}
+			# Khalga takes the essence, so kill the mother
+			mother = {
+				death = {
+					death_reason = death_childbirth
+				}              
+			}
+		}
+	}
 }
 
 # ACS.20 - Notify host about Vee beauty - Select Vee current character
 character_event = {
-    id = ACS.20
-    hide_window = yes
-    is_triggered_only = yes
-    has_character_flag = is_vee
+	id = ACS.20
+	hide_window = yes
+	is_triggered_only = yes
+	has_character_flag = is_vee
 
-    immediate = {
-        host = {
-            character_event = { id = ACS.21 }
-        }
-    }
+	immediate = {
+		host = {
+			character_event = { id = ACS.21 }
+		}
+	}
 }
 
 # ACS.21 - Send notice to Vee host
 character_event = {
-    id = ACS.21
-    title = EVTTITLE.ACS.21
-    desc = EVTDESC.ACS.21
-    picture = GFX_evt_vee_adolescense
-    hide_window = yes
-    is_triggered_only = yes
+	id = ACS.21
+	title = EVTTITLE.ACS.21
+	desc = EVTDESC.ACS.21
+	picture = GFX_evt_vee_adolescense
+	hide_window = yes
+	is_triggered_only = yes
 
-    option = {
-        name = OK
-        ai_chance = { factor = 100 }
-        prestige = 10
-    }
+	option = {
+		name = OK
+		ai_chance = { factor = 100 }
+		prestige = 10
+	}
 }
 
 ###########################
@@ -600,45 +601,45 @@ character_event = {
 ###########################
 # ACS.22 - Kill Vee at 33 years
 character_event = {
-    id = ACS.22
-    hide_window = yes
-    is_triggered_only = yes
-    has_character_flag = is_vee
+	id = ACS.22
+	hide_window = yes
+	is_triggered_only = yes
+	has_character_flag = is_vee
 
-    trigger = {
-        age = 33
-    }
+	trigger = {
+		age = 33
+	}
 
-    immediate = {
-        death = {
-            death_reason = death_murder_unknown
-        }        
-    }
+	immediate = {
+		death = {
+			death_reason = death_murder_unknown
+		}        
+	}
 }
 
 # ACS.23 - Raise the child to a Vee form
 character_event = {
-    id = ACS.23
-    hide_window = yes
-    is_triggered_only = yes
-    has_character_flag = is_vee
+	id = ACS.23
+	hide_window = yes
+	is_triggered_only = yes
+	has_character_flag = is_vee
 
-    immediate = {
-        random_child = {
-            limit = {
-                is_female = yes
-                prisoner = no
-                is_incapable = no
-            }
-            set_character_flag = is_vee
-            add_trait = syrena
-        } 
-        pentaghast_society = {
-            any_society_member = {
-                letter_event = { id = ACS.28 }
-            }
-        }       
-    }
+	immediate = {
+		random_child = {
+			limit = {
+				is_female = yes
+				prisoner = no
+				is_incapable = no
+			}
+			set_character_flag = is_vee
+			add_trait = syrena
+		} 
+		pentaghast_society = {
+			any_society_member = {
+				letter_event = { id = ACS.28 }
+			}
+		}       
+	}
 }
 
 ##############################
@@ -646,351 +647,351 @@ character_event = {
 ##############################
 # ACS.25 - Procreate if she Vee can - ROOT: Vee. Select the candidate
 character_event = {
-    id = ACS.25
-    desc = ACS25DESC
-    is_triggered_only = yes
-    has_character_flag = is_vee
-    picture = GFX_evt_vee_adolescense
+	id = ACS.25
+	desc = ACS25DESC
+	is_triggered_only = yes
+	has_character_flag = is_vee
+	picture = GFX_evt_vee_adolescense
 
-    trigger = {
-        age = 16
-        is_pregnant = no        
-        is_incapable = no
-        prisoner = no
-        # has_character_flag = awaken_vee
-    }    
+	trigger = {
+		age = 16
+		is_pregnant = no        
+		is_incapable = no
+		prisoner = no
+		# has_character_flag = awaken_vee
+	}    
 
-    option = {
-        name = ACS25OPTBA
-        ai_chance = {
-            factor = 100
-        }
-        host = {
-            create_character = {
-               female = no
-               random_traits = yes
-            }
-            new_character = {
-                character_event = { id = ACS.26 }
-            }
-        }
-    }
-    option = {
-        ai_chance = {
-            factor = 0
-        }
-        name = ACS25OPTB
-    }
+	option = {
+		name = ACS25OPTBA
+		ai_chance = {
+			factor = 100
+		}
+		host = {
+			create_character = {
+			   female = no
+			   random_traits = yes
+			}
+			new_character = {
+				character_event = { id = ACS.26 }
+			}
+		}
+	}
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = ACS25OPTB
+	}
 }
 
 # ACS.26 - Ping event Vee impregnation
 character_event = {
-    id = ACS.26
-    hide_window = yes
-    is_triggered_only = yes
+	id = ACS.26
+	hide_window = yes
+	is_triggered_only = yes
 
-    immediate = {
-        FROM = {
-            character_event = { id = ACS.27 }
-        }
-    }
+	immediate = {
+		FROM = {
+			character_event = { id = ACS.27 }
+		}
+	}
 }
 
 # ACS.27 - Vee gets pregnancy
 character_event = {
-    id = ACS.27
-    hide_window = yes
-    is_triggered_only = yes
+	id = ACS.27
+	hide_window = yes
+	is_triggered_only = yes
 
-    immediate = {
-        impregnate_cuckoo = FROM
-    }
+	immediate = {
+		impregnate_cuckoo = FROM
+	}
 }
 
 # ACS.28 - Send a letter to Pentaghast members notifying transfer essence
 character_event = {
-    id = ACS.28
-    desc = EVTDESC.ACS.28
-    border = GFX_event_letter_frame_war
-    picture = GFX_evt_courtiers_talking
-    is_triggered_only = yes
+	id = ACS.28
+	desc = EVTDESC.ACS.28
+	border = GFX_event_letter_frame_war
+	picture = GFX_evt_courtiers_talking
+	is_triggered_only = yes
 
-    option = {
-        name = OK
-        ai_chance = { factor = 100 }    
-    }
+	option = {
+		name = OK
+		ai_chance = { factor = 100 }    
+	}
 }
 
 # ACS.29 - Byakugan inheritance mechanics
 character_event = {
-    id = ACS.29
-    hide_window = yes
-    is_triggered_only = yes
+	id = ACS.29
+	hide_window = yes
+	is_triggered_only = yes
 
-    immediate = {
-        # All Khalga sons inherits byakugan
-        if = {
-            limit = {
-                real_father_even_if_dead = {
-                    has_character_flag = is_khalga
-                }
-            }
-            add_trait = byakugan
-            set_character_flag = direct_byakugan
-        }        
-        # Recesive byakugan
-        if = {
-            limit = {
-                OR = {
-                    real_father_even_if_dead = {
-                        has_character_flag = direct_byakugan
-                    }
-                    mother_even_if_dead = {
-                        has_character_flag = direct_byakugan
-                    }
-                }                
-            }
-            add_trait = byakugan
-            set_character_flag = recesive_byakugan
-        }
-        # Byakugan inheritance from two recesives
-        if = {
-            limit = {
-                real_father_even_if_dead = {
-                    has_character_flag = recesive_byakugan
-                }
-                mother_even_if_dead = {
-                    has_character_flag = recesive_byakugan
-                }
+	immediate = {
+		# All Khalga sons inherits byakugan
+		if = {
+			limit = {
+				real_father_even_if_dead = {
+					has_character_flag = is_khalga
+				}
+			}
+			add_trait = byakugan
+			set_character_flag = direct_byakugan
+		}        
+		# Recesive byakugan
+		if = {
+			limit = {
+				OR = {
+					real_father_even_if_dead = {
+						has_character_flag = direct_byakugan
+					}
+					mother_even_if_dead = {
+						has_character_flag = direct_byakugan
+					}
+				}                
+			}
+			add_trait = byakugan
+			set_character_flag = recesive_byakugan
+		}
+		# Byakugan inheritance from two recesives
+		if = {
+			limit = {
+				real_father_even_if_dead = {
+					has_character_flag = recesive_byakugan
+				}
+				mother_even_if_dead = {
+					has_character_flag = recesive_byakugan
+				}
 
-            }
-            add_trait = byakugan
-            set_character_flag = direct_byakugan
-        }
+			}
+			add_trait = byakugan
+			set_character_flag = direct_byakugan
+		}
 
-        # All Vee children inherit sharingan
-        if = {
-            limit = {
-                mother_even_if_dead = {
-                    has_character_flag = is_vee
-                }
-            }
-            add_trait = sharingan
-            set_character_flag = direct_sharingan
-        }        
-        # Recesive sharingan
-        if = {
-            limit = {
-                OR = {
-                    real_father_even_if_dead = {
-                        has_character_flag = direct_sharingan
-                    }
-                    mother_even_if_dead = {
-                        has_character_flag = direct_sharingan
-                    }
-                }                
-            }
-            add_trait = sharingan
-            set_character_flag = recesive_sharingan
-        }
-        # sharingan inheritance from two recesives
-        if = {
-            limit = {
-                real_father_even_if_dead = {
-                    has_character_flag = recesive_sharingan
-                }
-                mother_even_if_dead = {
-                    has_character_flag = recesive_sharingan
-                }
+		# All Vee children inherit sharingan
+		if = {
+			limit = {
+				mother_even_if_dead = {
+					has_character_flag = is_vee
+				}
+			}
+			add_trait = sharingan
+			set_character_flag = direct_sharingan
+		}        
+		# Recesive sharingan
+		if = {
+			limit = {
+				OR = {
+					real_father_even_if_dead = {
+						has_character_flag = direct_sharingan
+					}
+					mother_even_if_dead = {
+						has_character_flag = direct_sharingan
+					}
+				}                
+			}
+			add_trait = sharingan
+			set_character_flag = recesive_sharingan
+		}
+		# sharingan inheritance from two recesives
+		if = {
+			limit = {
+				real_father_even_if_dead = {
+					has_character_flag = recesive_sharingan
+				}
+				mother_even_if_dead = {
+					has_character_flag = recesive_sharingan
+				}
 
-            }
-            add_trait = sharingan
-            set_character_flag = direct_sharingan
-        }
-    }
+			}
+			add_trait = sharingan
+			set_character_flag = direct_sharingan
+		}
+	}
 }
 
 
 # ACS.30 - Set Tilda clan to a random steppe province
 character_event = {
-    id = ACS.30
-    hide_window = yes
-    is_triggered_only = yes
+	id = ACS.30
+	hide_window = yes
+	is_triggered_only = yes
 
-    immediate = {
-        random_province = {
-            limit = {
-                region = world_steppe
-                terrain = steppe
-            }
-            holder_scope = {
-                spawn_unit = {
-                    owner = ROOT
-                    province = PREV
-                    home = PREV
-                    troops = {
-                        knights = { 5 5 }
-                        horse_archers = { 100 100 }
-                    }
-                    earmark = tilda_troops_a
-                    attrition = 0.0
-                    maintenance_multiplier = 0.0
-                }
-            }
-        }
-        set_character_flag = moved_tilda
-        disband_event_forces = tilda_starter
-    }
+	immediate = {
+		random_province = {
+			limit = {
+				region = world_steppe
+				terrain = steppe
+			}
+			holder_scope = {
+				spawn_unit = {
+					owner = ROOT
+					province = PREV
+					home = PREV
+					troops = {
+						knights = { 5 5 }
+						horse_archers = { 100 100 }
+					}
+					earmark = tilda_troops_a
+					attrition = 0.0
+					maintenance_multiplier = 0.0
+				}
+			}
+		}
+		set_character_flag = moved_tilda
+		disband_event_forces = tilda_starter
+	}
 }
 
 ######################################################
 # ACS.31 - BEGIN Periodical event for nomadic Tilda ##
 ######################################################
 character_event = {
-    id = ACS.31
-    hide_window = yes
-    is_triggered_only = yes
-    has_character_flag = is_ancient_one
+	id = ACS.31
+	hide_window = yes
+	is_triggered_only = yes
+	has_character_flag = is_ancient_one
 
-    trigger = {
-        NOT = { has_character_flag = in_nomadic_migration }
-        is_landed = no
-    }
+	trigger = {
+		NOT = { has_character_flag = in_nomadic_migration }
+		is_landed = no
+	}
 
-    immediate = {
-        set_character_flag = in_nomadic_migration
-        set_character_flag = tilda_first_period
-        clr_character_flag = tilda_fourth_period
-        location = {
-            random_neighbor_province = {
-                limit = {
-                    region = world_steppe                    
-                }
-                holder_scope = {
-                    spawn_unit = {
-                        owner = ROOT
-                        province = PREV
-                        home = PREV
-                        troops = {
-                            knights = { 5 5 }
-                            horse_archers = { 100 100 }
-                        }
-                        earmark = tilda_troops_b
-                        attrition = 0.0
-                        maintenance_multiplier = 0.0
-                    }
-                }
-            }            
-        }
-        disband_event_forces = tilda_troops_a
-        disband_event_forces = tilda_troops_e
-        ROOT = { character_event = { id = ACS.32 days = 60} }             
-    }
+	immediate = {
+		set_character_flag = in_nomadic_migration
+		set_character_flag = tilda_first_period
+		clr_character_flag = tilda_fourth_period
+		location = {
+			random_neighbor_province = {
+				limit = {
+					region = world_steppe                    
+				}
+				holder_scope = {
+					spawn_unit = {
+						owner = ROOT
+						province = PREV
+						home = PREV
+						troops = {
+							knights = { 5 5 }
+							horse_archers = { 100 100 }
+						}
+						earmark = tilda_troops_b
+						attrition = 0.0
+						maintenance_multiplier = 0.0
+					}
+				}
+			}            
+		}
+		disband_event_forces = tilda_troops_a
+		disband_event_forces = tilda_troops_e
+		ROOT = { character_event = { id = ACS.32 days = 60} }             
+	}
 }
 
 # ACS.32 - Periodical event for nomadic Tilda
 character_event = {
-    id = ACS.32
-    hide_window = yes
-    is_triggered_only = yes    
+	id = ACS.32
+	hide_window = yes
+	is_triggered_only = yes    
 
-    immediate = {
-        clr_character_flag = tilda_first_period
-        set_character_flag = tilda_second_period
-        location = {
-            random_neighbor_province = {
-                limit = {
-                    region = world_steppe
-                }
-                holder_scope = {
-                    spawn_unit = {
-                        owner = ROOT
-                        province = PREV
-                        home = PREV
-                        troops = {
-                            knights = { 5 5 }
-                            horse_archers = { 100 100 }
-                        }
-                        earmark = tilda_troops_c
-                        attrition = 0.0
-                        maintenance_multiplier = 0.0
-                    }
-                }
-            }            
-        }
-        disband_event_forces = tilda_troops_b
-        ROOT = { character_event = { id = ACS.33 days = 60} }             
-    }
+	immediate = {
+		clr_character_flag = tilda_first_period
+		set_character_flag = tilda_second_period
+		location = {
+			random_neighbor_province = {
+				limit = {
+					region = world_steppe
+				}
+				holder_scope = {
+					spawn_unit = {
+						owner = ROOT
+						province = PREV
+						home = PREV
+						troops = {
+							knights = { 5 5 }
+							horse_archers = { 100 100 }
+						}
+						earmark = tilda_troops_c
+						attrition = 0.0
+						maintenance_multiplier = 0.0
+					}
+				}
+			}            
+		}
+		disband_event_forces = tilda_troops_b
+		ROOT = { character_event = { id = ACS.33 days = 60} }             
+	}
 }
 
 # ACS.33 - Periodical event for nomadic Tilda
 character_event = {
-    id = ACS.33
-    hide_window = yes
-    is_triggered_only = yes    
+	id = ACS.33
+	hide_window = yes
+	is_triggered_only = yes    
 
-    immediate = {
-        clr_character_flag = tilda_second_period
-        set_character_flag = tilda_third_period
-        location = {
-            random_neighbor_province = {
-                limit = {
-                    region = world_steppe
-                }
-                holder_scope = {
-                    spawn_unit = {
-                        owner = ROOT
-                        province = PREV
-                        home = PREV
-                        troops = {
-                            knights = { 5 5 }
-                            horse_archers = { 100 100 }
-                        }
-                        earmark = tilda_troops_d
-                        attrition = 0.0
-                        maintenance_multiplier = 0.0
-                    }
-                }
-            }            
-        }
-        disband_event_forces = tilda_troops_c
-        ROOT = { character_event = { id = ACS.34 days = 60} }             
-    }
+	immediate = {
+		clr_character_flag = tilda_second_period
+		set_character_flag = tilda_third_period
+		location = {
+			random_neighbor_province = {
+				limit = {
+					region = world_steppe
+				}
+				holder_scope = {
+					spawn_unit = {
+						owner = ROOT
+						province = PREV
+						home = PREV
+						troops = {
+							knights = { 5 5 }
+							horse_archers = { 100 100 }
+						}
+						earmark = tilda_troops_d
+						attrition = 0.0
+						maintenance_multiplier = 0.0
+					}
+				}
+			}            
+		}
+		disband_event_forces = tilda_troops_c
+		ROOT = { character_event = { id = ACS.34 days = 60} }             
+	}
 }
 
 # ACS.34 - Periodical event for nomadic Tilda
 character_event = {
-    id = ACS.34
-    hide_window = yes
-    is_triggered_only = yes    
+	id = ACS.34
+	hide_window = yes
+	is_triggered_only = yes    
 
-    immediate = {
-        clr_character_flag = tilda_third_period
-        set_character_flag = tilda_fourth_period       
-        location = {
-            random_neighbor_province = {
-                limit = {
-                    region = world_steppe
-                }
-                holder_scope = {
-                    spawn_unit = {
-                        owner = ROOT
-                        province = PREV
-                        home = PREV
-                        troops = {
-                            knights = { 5 5 }
-                            horse_archers = { 100 100 }
-                        }
-                        earmark = tilda_troops_e
-                        attrition = 0.0
-                        maintenance_multiplier = 0.0
-                    }
-                }
-            }            
-        }
-        disband_event_forces = tilda_troops_d
-        clr_character_flag = in_nomadic_migration
-    }
+	immediate = {
+		clr_character_flag = tilda_third_period
+		set_character_flag = tilda_fourth_period       
+		location = {
+			random_neighbor_province = {
+				limit = {
+					region = world_steppe
+				}
+				holder_scope = {
+					spawn_unit = {
+						owner = ROOT
+						province = PREV
+						home = PREV
+						troops = {
+							knights = { 5 5 }
+							horse_archers = { 100 100 }
+						}
+						earmark = tilda_troops_e
+						attrition = 0.0
+						maintenance_multiplier = 0.0
+					}
+				}
+			}            
+		}
+		disband_event_forces = tilda_troops_d
+		clr_character_flag = in_nomadic_migration
+	}
 }
 
 #####################################
@@ -998,48 +999,74 @@ character_event = {
 #####################################
 # ACS.35 - Check for venezia exists
 character_event = {
-    id = ACS.35
-    hide_window = yes
-    is_triggered_only = yes
+	id = ACS.35
+	hide_window = yes
 
-    trigger = {
-        NOT = { has_global_flag = infiltered_venecia }
-    }   
+	trigger = {
+		has_global_flag = comet_tiamat
+		NOT = { has_global_flag = infiltered_venecia }
+	} 
 
-    immediate = {
-        if = {
-            limit = {
-                random_character = {
-                    has_landed_title = c_venezia
-                    is_merchant_republic = yes
-                }
-            }
+	mean_time_to_happen = {
+		months = 4
+	}  
 
-            random_character = {
-                limit = {
-                    has_landed_title = c_venezia
-                }
-                character_event = { id = ACS.36 }
-            }
-        }
-    }
+	immediate = {
+		random_character = {
+			limit = {
+				has_landed_title = c_venezia
+				is_merchant_republic = yes
+			}
+			character_event = { id = ACS.36 }
+		}
+	}
 }
 
 # ACS.36
 character_event = {
-    id = ACS.36
-    hide_window = yes
-    is_triggered_only = yes
+	id = ACS.36
+	hide_window = yes
+	is_triggered_only = yes
 
-    any_vassal = {
-        set_character_flag = check_for_dissapears
-    }
+	immediate = {
+		any_vassal = {
+			set_character_flag = check_for_dissapears
+		}
 
-    random_vassal = {
-        limit = {
-            is_patrician = yes
-            ai = yes
-        }
-    }
+		random_vassal = {
+			limit = {
+				is_patrician = yes
+				ai = yes
+			}
+			any_dynasty_member = {
+				death = {
+					death_reason = death_murder_unknown
+				}
+			}
+			death = {
+				death_reason = death_murder_unknown
+			}
+		}
+		character_event = { id = ACS.37 days = 7 }
+	}	
+}
 
+# ACS.37 - set new patrician
+character_event = {
+	id = ACS.event_number
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		random_vassal = {
+			limit = {
+				is_patrician = yes
+				ai = yes
+				NOT = { has_character_flag = check_for_dissapears }
+			}
+			add_trait = ambitious
+			join_society = pentaghast_society
+			set_global_flag = infiltered_venecia
+		} 
+	}
 }    
