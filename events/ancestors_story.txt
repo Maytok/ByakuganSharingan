@@ -992,3 +992,54 @@ character_event = {
         clr_character_flag = in_nomadic_migration
     }
 }
+
+#####################################
+######### REPUBLIC EVENTS ###########
+#####################################
+# ACS.35 - Check for venezia exists
+character_event = {
+    id = ACS.35
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        NOT = { has_global_flag = infiltered_venecia }
+    }   
+
+    immediate = {
+        if = {
+            limit = {
+                random_character = {
+                    has_landed_title = c_venezia
+                    is_merchant_republic = yes
+                }
+            }
+
+            random_character = {
+                limit = {
+                    has_landed_title = c_venezia
+                }
+                character_event = { id = ACS.36 }
+            }
+        }
+    }
+}
+
+# ACS.36
+character_event = {
+    id = ACS.36
+    hide_window = yes
+    is_triggered_only = yes
+
+    any_vassal = {
+        set_character_flag = check_for_dissapears
+    }
+
+    random_vassal = {
+        limit = {
+            is_patrician = yes
+            ai = yes
+        }
+    }
+
+}    
