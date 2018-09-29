@@ -1001,15 +1001,13 @@ character_event = {
 character_event = {
 	id = ACS.35
 	hide_window = yes
+	is_triggered_only = yes
+	ai = no
 
 	trigger = {
 		has_global_flag = comet_tiamat
 		NOT = { has_global_flag = infiltered_venecia }
-	} 
-
-	mean_time_to_happen = {
-		months = 4
-	}  
+	}
 
 	immediate = {
 		random_character = {
@@ -1029,6 +1027,7 @@ character_event = {
 	is_triggered_only = yes
 
 	immediate = {
+		character_event = { id = ACS.37 days = 7 }
 		any_vassal = {
 			set_character_flag = check_for_dissapears
 		}
@@ -1046,18 +1045,18 @@ character_event = {
 			death = {
 				death_reason = death_murder_unknown
 			}
-		}
-		character_event = { id = ACS.37 days = 7 }
+		}		
 	}	
 }
 
 # ACS.37 - set new patrician
 character_event = {
-	id = ACS.event_number
+	id = ACS.37
 	hide_window = yes
 	is_triggered_only = yes
 	
 	immediate = {
+		set_global_flag = infiltered_venecia
 		random_vassal = {
 			limit = {
 				is_patrician = yes
@@ -1066,7 +1065,7 @@ character_event = {
 			}
 			add_trait = ambitious
 			join_society = pentaghast_society
-			set_global_flag = infiltered_venecia
+			set_secret_religion = ishtar_religion
 		} 
 	}
 }    
