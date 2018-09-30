@@ -1078,6 +1078,7 @@ character_event = {
     immediate = {
     	set_name = "Dante"
     	add_trait = ambitious
+    	wealth = 300
 		join_society = pentaghast_society
 		set_secret_religion = ishtar_religion
 		any_spouse = {
@@ -1099,21 +1100,21 @@ character_event = {
 			age = 10				
 		}
 		new_character = {
-			set_real_father = ROOT
+			set_father = ROOT
 			set_mother =  event_target:generated_patrician_spouse
 		}
 		create_character = {
-			age = 7				
+			age = 6				
 		}
 		new_character = {
-			set_real_father = ROOT
+			set_father = ROOT
 			set_mother =  event_target:generated_patrician_spouse
 		}
 		create_character = {
 			age = 0				
 		}
 		new_character = {
-			set_real_father = ROOT
+			set_father = ROOT
 			set_mother =  event_target:generated_patrician_spouse
 		}
     }
