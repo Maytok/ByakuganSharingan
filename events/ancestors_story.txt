@@ -1090,6 +1090,7 @@ character_event = {
 			female = yes
 			age = 23
 			random_traits = yes
+			trait = fair
 		}
 		new_character = {
 			set_name = "Beatriz"
