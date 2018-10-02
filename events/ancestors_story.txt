@@ -77,6 +77,7 @@ character_event = {
 			set_society_grandmaster = yes
 			character_event = { id = ACS.200 }
 			set_secret_religion = ishtar_religion
+			add_artifact = eden_apple
 		}
 		create_character = {
 			name = Tilda
@@ -625,15 +626,37 @@ character_event = {
 	has_character_flag = is_vee
 
 	immediate = {
-		random_child = {
+		if = {
 			limit = {
-				is_female = yes
-				prisoner = no
-				is_incapable = no
+				random_child = {
+					is_female = yes
+					prisoner = no
+					is_incapable = no
+				}
 			}
-			set_character_flag = is_vee
-			add_trait = syrena
-		} 
+			random_child = {
+				limit = {
+					is_female = yes
+					prisoner = no
+					is_incapable = no
+				}
+				set_character_flag = is_vee
+				add_trait = syrena					
+			}
+		}
+		else = {
+			set_global_flag = vanished_vee
+			pentaghast_society = {
+				random_society_member = {
+					limit = {
+						is_society_grandmaster = yes
+						NOT = { has_artifact = eden_apple }
+					}
+					add_artifact = eden_apple
+				}
+			}
+		}		
+
 		pentaghast_society = {
 			any_society_member = {
 				letter_event = { id = ACS.28 }
