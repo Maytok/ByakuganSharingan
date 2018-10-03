@@ -1,0 +1,37 @@
+targetted_decisions = {
+	# Select a new target for Vee. Target must be at Pentaghast society leader court
+	select_new_vee_host = {
+		filter = court
+		ai_target_filter = court
+		is_high_prio = yes
+
+		from_potential = {
+			has_global_flag = vanished_vee
+			is_society_grandmaster = yes
+			society_member_of = pentaghast_society    		
+  		}
+
+  		potential = {
+    		is_female = yes
+    		is_incapable = no
+			prisoner = no
+    		OR = {
+    			trait = sharingan
+    			trait = mangekyo_sharingan
+    		}
+    		NOT = { trait = syrena }
+  		}
+
+  		effect = {
+  			clr_global_flag = vanished_vee
+  			ROOT = {
+  				set_character_flag = is_vee
+				add_trait = syrena
+  			}
+  		}
+
+  		ai_will_do = {
+		    factor = 1
+		}
+	}
+}
