@@ -208,6 +208,20 @@ character_event = {
 				set_character_flag = is_mercenary_leader
 				add_trait = adventurer
 				add_character_modifier = { modifier = started_mercenary_company months = 30 }
+				any_spouse = {
+					death = {
+						death_reason = death_childbirth
+					}
+				}
+				create_character = {
+					female = yes
+					random_traits = yes
+				}
+				new_character = {
+					save_event_target_as = olaf_spouse
+					impregnate = FROM
+				}
+				add_spouse = event_target:olaf_spouse
 			}
 			character_event = { id = ACS.6 }
 		}        
