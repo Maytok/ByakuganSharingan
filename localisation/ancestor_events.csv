@@ -19,7 +19,7 @@ EVTDESC.ACS.3;Olaf, the peasant I rescued, has turned out to be the head of a me
 EVTDESC.ACS.6;Olaf has left in search of adventures, but he has left Senua, his sister, in my court;Olaf has left in search of adventures, but he has left Senua, his sister, in my court;Olaf has left in search of adventures, but he has left Senua, his sister, in my court;;Olaf se ha marchado en busca de aventuras, pero ha dejado a Senua, su hermana, en mi corte;;;;;;;;;x
 
 EVTTITLE_ACS_8;Twins;;Manschettenknöpfe;Jumeaux;Gemelos;;;;;;;;;x
-EVTDESC_ACS_8;Senua has given birth to twins. The male baby has strange white eyes and the female baby has curious red eyes. Senua and I went to bed nine months ago. Maybe they are my children.;Senua has given birth to twins. The male baby has strange white eyes and the female baby has curious red eyes. Senua and I went to bed nine months ago. Maybe they are my children.;Senua has given birth to twins. The male baby has strange white eyes and the female baby has curious red eyes. Senua and I went to bed nine months ago. Maybe they are my children.;;Senua ha alumbrado gemelos. El varón tiene extraños ojos blancos y la mujer unos curiosos ojos rojos. Senua y yo nos acostamos hace nueve meses. Quizá ellos son mis hijos.;;;;;;;;;x
+EVTDESC_ACS_8;Senua has given birth to twins. The male baby has strange white eyes and the female baby has curious red eyes.;Senua has given birth to twins. The male baby has strange white eyes and the female baby has curious red eyes.;Senua has given birth to twins. The male baby has strange white eyes and the female baby has curious red eyes. ;;Senua ha alumbrado gemelos. El varón tiene extraños ojos blancos y la mujer unos curiosos ojos rojos.;;;;;;;;;x
 OK;I understand;I understand;I understand;;Entendido;;;;;;;;;x
 
 EVTTITLE_ACS_9;Tragedy;Tragedy;Tragedy;;Tragedia;;;;;;;;;x
@@ -33,4 +33,4 @@ had_pentaghast_fertility_ritual;;;;;Estuvo en una misteriosa reunión;;;;;;;;;x
 ACS25DESC;There is a man in the court who attracts me. Should I sleep with him?;Il y a un homme dans la cour qui m'attire. Dois-je dormir avec lui?;Da ist ein Mann im Gericht, der mich anzieht. Soll ich mit ihm schlafen?;;Hay un hombre en la corte que me atrae. ¿Debería acostarme con él?;;;;;;;;;x
 ACS25OPTBA;That our bodies embrace in the bed;Que nos corps s'embrassent dans le lit;Dass unsere Korper sich im Bett umarmen;;Que nuestros cuerpos se mezclen en el lecho;;;;;;;;;x
 ACS25OPTB;I must dominate myself;Je dois me dominer;Ich muss mich beherrschen;;Debo dominarme;;;;;;;;;x
-THE_SAKJE;The Sakje;The Sakje;The Sakje;;The Sakje;;;;;;;;;x
+THE_SAKJE;The Sakje;The Sakje;The Sakje;;Los Sakje;;;;;;;;;x

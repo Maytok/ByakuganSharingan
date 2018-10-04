@@ -66,3 +66,9 @@ khalga_pilgrim = {
 	random = no
 	cannot_inherit = yes
 }
+
+prevent_marriage = {
+	cannot_marry = yes
+	cannot_inherit = yes
+	hidden = yes
+}
