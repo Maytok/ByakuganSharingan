@@ -758,7 +758,7 @@ character_event = {
 	}
 }
 
-# ACS.29 - Byakugan inheritance mechanics
+# ACS.29 - Dojutsu inheritance mechanics
 character_event = {
 	id = ACS.29
 	hide_window = yes
@@ -1154,5 +1154,89 @@ character_event = {
 			set_father = ROOT
 			set_mother =  event_target:generated_patrician_spouse
 		}
+    }
+}
+
+# ACS.39 - Pentaghast leader selects a child with dojutsu for kidnap
+character_event = {
+	id = ACS.39
+    hide_window = yes
+    is_triggered_only = yes
+
+    only_playable = yes
+    is_in_society = yes
+
+    trigger = {
+    	is_society_grandmaster = yes
+		society_member_of = pentaghast_society
+    }
+
+    immediate = {
+    	random_character = {
+    		limit = {
+    			OR = {
+    				trait = sharingan
+    				trait = byakugan
+    				trait = mangekyo_sharingan
+    			}
+    			age <= 7
+    			ai = yes
+    			NOT = { has_character_flag = is_vee }
+    			NOT = { has_character_flag = is_khalga }
+    		}
+    		move_character = ROOT
+    		imprison = yes
+    		add_trait = prevent_marriage
+    	}
+    }
+}
+
+# ACS.40 - Pentaghast leader makes reproduction between two dojutsu candidates
+character_event = {
+	id = ACS.40
+    hide_window = yes
+    is_triggered_only = yes
+
+    only_playable = yes
+    is_in_society = yes
+
+    trigger = {
+    	is_society_grandmaster = yes
+		society_member_of = pentaghast_society
+    }
+
+    immediate = {
+    	random_courtier = {
+    		limit = {
+    			prisoner = yes
+    			OR = {
+    				trait = sharingan
+    				trait = byakugan
+    				trait = mangekyo_sharingan
+    			}
+    			age >= 17
+    			ai = yes
+    			is_female = no
+    			is_incapable = no
+    		}
+    		save_event_target_as = male_pentaghast_eugenesia
+    	}
+
+    	random_courtier = {
+    		limit = {
+    			prisoner = yes
+    			OR = {
+    				trait = sharingan
+    				trait = byakugan
+    				trait = mangekyo_sharingan
+    			}
+    			age >= 17
+    			ai = yes
+    			is_pregnant = no
+				is_female = yes
+				is_incapable = no
+    		}
+    		impregnate = event_target:male_pentaghast_eugenesia
+    	}
     }
 }
