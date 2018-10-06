@@ -54,7 +54,10 @@ targetted_decisions = {
 
 		effect = {
 		    FROM = { set_character_flag = wants_to_get_mangekyo }
-		    ROOT = { set_character_flag = target_for_mangekyo }
+		    ROOT = {
+		    	set_character_flag = target_for_mangekyo
+		    	character_event = { id = ACS.400}
+		    }
 		}
 
 		ai_will_do = {

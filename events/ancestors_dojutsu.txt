@@ -32,6 +32,7 @@ character_event = {
     	}
 
     	event_target:wants_to_get_mangekyo = {
+    		remove_trait = sharingan
     		add_trait = mangekyo_sharingan
     	}
     	death = {
@@ -84,12 +85,7 @@ character_event = {
 					death_reason = death_duel killer = FROM
 				}
 			}
-			200 = { # challenger win
-				### modifiers
-				#modifier = {
-				#	factor = 0
-				#	always = yes ######### DEBUGGING
-				#}
+			200 = {
 				modifier = {
 					FROM = {
 						combat_rating_diff = { who = ROOT value = 1 }
@@ -159,9 +155,10 @@ character_event = {
 						}
 						FROM = {
 							death = {
-								death_reason = death_duel killer = ROOT
+								death_reason = death_murder_unknown killer = ROOT
 							}
 						}
+						remove_trait = sharingan
 						add_trait = mangekyo_sharingan
 					}
 					5 = {
@@ -175,9 +172,10 @@ character_event = {
 						}
 						FROM = {
 							death = {
-								death_reason = death_duel killer = ROOT
+								death_reason = death_murder_unknown killer = ROOT
 							}
 						}
+						remove_trait = sharingan
 						add_trait = mangekyo_sharingan
 						random_list = {
 							30 = { add_trait = disfigured }
@@ -236,18 +234,19 @@ character_event = {
 				}
 				### effects
 				random_list = {
-					20 = {
+					50 = {
 						FROM = {
 							add_character_modifier = {
 								modifier = recent_duel_victory
 								months = 12
-							}						
+							}
+							clr_character_flag = target_for_mangekyo
 						}
 						death = {
-							death_reason = death_duel killer = FROM
+							death_reason = death_murder_unknown killer = FROM
 						}
 					}
-					80 = {
+					50 = {
 						modifier = {
 							is_maimed_trigger = yes
 							factor = 0
@@ -263,9 +262,10 @@ character_event = {
 								30 = { add_trait = one_handed }
 								30 = { add_trait = severely_injured }
 							}
+							clr_character_flag = target_for_mangekyo
 						}
 						death = {
-							death_reason = death_duel killer = FROM
+							death_reason = death_murder_unknown killer = FROM
 						}
 					}
 				}
