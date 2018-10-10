@@ -1179,6 +1179,7 @@ character_event = {
     				trait = byakugan
     				trait = mangekyo_sharingan
     			}
+    			NOT = { trait = in_hiding }
     			age <= 7
     			ai = yes
     			is_incapable = no

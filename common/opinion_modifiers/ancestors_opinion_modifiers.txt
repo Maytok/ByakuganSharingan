@@ -1,0 +1,3 @@
+opinion_hypnotized_with_sharingan = {
+	opinion = 50
+}
