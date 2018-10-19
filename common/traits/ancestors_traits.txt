@@ -13,7 +13,7 @@ byakugan = {
 	plot_discovery_chance = 0.70
 	combat_rating = 5
 	monthly_character_prestige = 1
-	same_opinion = 10
+	same_opinion = 20
 	martial = 5
 
 	opposites = { sharingan mangekyo_sharingan }
@@ -39,12 +39,12 @@ sharingan = {
 mangekyo_sharingan = {
 	random = no
 	intrigue = 10
-	martial = 13
+	martial = 10
 	learning = 10
 	combat_rating = 10
-	plot_power_modifier = 0.60
+	plot_power_modifier = 0.90
 	monthly_character_prestige = 10
-	same_opinion = 10
+	same_opinion = -10
 
 	opposites = { byakugan }
 	opposite_opinion = -200
