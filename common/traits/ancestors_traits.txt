@@ -15,6 +15,7 @@ byakugan = {
 	monthly_character_prestige = 1
 	same_opinion = 20
 	martial = 5
+	christian_church_opinion = -10
 
 	opposites = { sharingan mangekyo_sharingan }
 	opposite_opinion = -200
@@ -30,6 +31,7 @@ sharingan = {
 	monthly_character_prestige = 1
 	same_opinion = 10
 	martial = 5
+	christian_church_opinion = -10
 
 	opposites = { byakugan }
 	opposite_opinion = -200
@@ -45,6 +47,7 @@ mangekyo_sharingan = {
 	plot_power_modifier = 0.90
 	monthly_character_prestige = 10
 	same_opinion = -10
+	christian_church_opinion = -50
 
 	opposites = { byakugan }
 	opposite_opinion = -200
