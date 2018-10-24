@@ -15,9 +15,10 @@ narrative_event = {
 	
 	option = {
 		name = EVTOPTA.ACS.1
+		activate_title = { title = d_mercenary_pentaghast status = no }
 		set_global_flag = comet_tiamat
 		character_event = { id = ACS.2 days = 13 }
-		character_event = { id = ACS.3 days = 36 }
+		character_event = { id = ACS.3 days = 45 }
 	}
 }
 
@@ -150,9 +151,11 @@ character_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		FROM = {
-			character_event = { id = ACS.5 }
+		activate_title = { title = d_mercenary_pentaghast status = yes }
+		d_mercenary_pentaghast = {
+			grant_title = ROOT
 		}
+		set_defacto_liege = ROOT
 	}
 }
 
