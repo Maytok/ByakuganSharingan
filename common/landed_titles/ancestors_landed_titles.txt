@@ -11,7 +11,7 @@ d_mercenary_pentaghast = {
 	capital = 621 # Kangly
 	
 	# Parent Religion 
-	religion = sunni
+	religion = catholic
 	culture = turkish
 	
 	mercenary = yes
