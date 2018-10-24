@@ -3,3 +3,32 @@ b_alsitah = {
 	han = "Al-Sitah"
 	holy_site = ishtar_religion
 }
+
+d_mercenary_pentaghast = {
+	color = { 130 173 70 }
+	color2 = { 255 255 255 }
+
+	capital = 621 # Kangly
+	
+	# Parent Religion 
+	religion = sunni
+	culture = turkish
+	
+	mercenary = yes
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.00
+	
+	mercenary_type = muslim_turkic_company_composition
+}
