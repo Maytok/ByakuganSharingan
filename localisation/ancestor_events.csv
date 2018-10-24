@@ -38,3 +38,6 @@ EVTDESC_ACS_400;My friend has come to me. There is resolution in his eyes. He wa
 EVTOPTA_ACS_400;I will sacrifice myself for love;I will sacrifice myself for love;I will sacrifice myself for love;;Me sacrificaré por amor;;;;;;;;;x
 EVTOPTB_ACS_400;Traitor!;Traitor!;Traitor!;;Traidor!;;;;;;;;;x
 get_mangekyo_sharingan;Get bloody eyes;Get bloody eyes;Get bloody eyes;;Obtener ojos sangrientos;;;;;;;;;x
+borrow_money_grand_bank;Borrow money from Grand Bank;Borrow money from Grand Bank;Borrow money from Grand Bank;;Pedir prestado dinero al Gran Banco;;;;;;;;;x
+borrowed_from_grand_bank;Borrowed money from Grand Bank;Borrowed money from Grand Bank;Borrowed money from Grand Bank;;Pidió prestado dinero al Gran Banco;;;;;;;;;x
+borrow_money_grand_bank_desc;Borrowed money from Grand Bank;Borrowed money from Grand Bank;Borrowed money from Grand Bank;;El Gran Banco es una de las instituciones financieras más importantes del mundo. Pide prestado dinero para financiar tus necesidades.;;;;;;;;;x

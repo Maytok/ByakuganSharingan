@@ -28,7 +28,7 @@ ishtar_group = {
 		color = { 0.8 0.0 0.2 }
 		
 		crusade_name = CRUSADE
-		scripture_name = THE_BIBLE
+		scripture_name = THE_OLD_PAPIRES
 		priest_title = HIGH_WISE
 		piety_name = THE_VIR
 		
@@ -39,7 +39,7 @@ ishtar_group = {
 		}
 		
 		evil_god_names = {
-			SATAN LUCIFER THE_DEVIL
+			THE_ENEMY
 		}
 		
 		investiture = yes
