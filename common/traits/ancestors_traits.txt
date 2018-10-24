@@ -1,7 +1,8 @@
 syrena = {
 	cached = yes
-	random = no
-	sex_appeal_opinion = 200
+	random = no    
+	general_opinion = 50
+	sex_appeal_opinion = 100
 	health = 10
 	customizer = no
 	cannot_inherit = yes
@@ -13,9 +14,8 @@ byakugan = {
 	plot_discovery_chance = 0.70
 	combat_rating = 5
 	monthly_character_prestige = 1
-	same_opinion = 20
+	same_opinion = 10
 	martial = 5
-	christian_church_opinion = -10
 
 	opposites = { sharingan mangekyo_sharingan }
 	opposite_opinion = -200
@@ -31,7 +31,6 @@ sharingan = {
 	monthly_character_prestige = 1
 	same_opinion = 10
 	martial = 5
-	christian_church_opinion = -10
 
 	opposites = { byakugan }
 	opposite_opinion = -200
@@ -41,13 +40,12 @@ sharingan = {
 mangekyo_sharingan = {
 	random = no
 	intrigue = 10
-	martial = 10
+	martial = 13
 	learning = 10
-	combat_rating = 10
-	plot_power_modifier = 0.90
+	combat_rating = 13
+	plot_power_modifier = 0.60
 	monthly_character_prestige = 10
-	same_opinion = -10
-	christian_church_opinion = -50
+	same_opinion = 10
 
 	opposites = { byakugan }
 	opposite_opinion = -200
