@@ -70,7 +70,6 @@ character_event = {
 			trait = diligent
 			trait = lustful
 			health = 20
-			dynasty = 300001
 		}
 		new_character = {
 			set_character_flag = is_olaf
@@ -79,6 +78,7 @@ character_event = {
 			character_event = { id = ACS.200 }
 			set_secret_religion = ishtar_religion
 			add_artifact = eden_apple
+			dynasty = 300001
 		}
 		create_character = {
 			name = Tilda
