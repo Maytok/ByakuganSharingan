@@ -152,10 +152,12 @@ character_event = {
 
 	immediate = {
 		activate_title = { title = d_mercenary_pentaghast status = yes }
-		d_mercenary_pentaghast = {
-			grant_title = ROOT
-		}
-		set_defacto_liege = ROOT
+		ROOT = {
+			d_mercenary_pentaghast = {
+				grant_title = PREV
+			}
+			set_defacto_liege = THIS
+		}		
 	}
 }
 
