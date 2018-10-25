@@ -15,7 +15,6 @@ narrative_event = {
 	
 	option = {
 		name = EVTOPTA.ACS.1
-		activate_title = { title = d_mercenary_pentaghast status = no }
 		set_global_flag = comet_tiamat
 		character_event = { id = ACS.2 days = 13 }
 		character_event = { id = ACS.3 days = 45 }
@@ -151,13 +150,10 @@ character_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		activate_title = { title = d_mercenary_pentaghast status = yes }
-		ROOT = {
-			d_mercenary_pentaghast = {
-				grant_title = PREV
-			}
-			set_defacto_liege = THIS
-		}		
+		random_character = {
+            limit = { has_landed_title = d_mercenary_pentaghast }
+            character_event = { id = ACS.5 }
+        }		
 	}
 }
 
@@ -169,67 +165,26 @@ character_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		ROOT = {
-			if = {
-				limit = { is_nomadic = yes }
-				clan_title = {
-					create_title = {
-						tier = DUKE
-						name = DYNAMIC_MERCENARY_COMPANY
-						landless = yes
-						temporary = no
-						custom_created = yes
-						culture = FROM
-						holder = FROM
-						base_title = THIS
-						mercenary = yes
-						ruler = "CAPTAIN"
-						ruler_female = "CAPTAIN"
-						foa = "CAPTAIN_FOA"
-					}
+		FROM = {
+            move_character = ROOT
+			add_trait = adventurer
+			add_character_modifier = { modifier = started_mercenary_company months = 30 }
+			any_spouse = {
+				death = {
+					death_reason = death_childbirth
 				}
 			}
-			if = {
-				limit = { is_nomadic = no }
-				primary_title = {
-					create_title = {
-						tier = DUKE
-						name = DYNAMIC_MERCENARY_COMPANY
-						landless = yes
-						temporary = no
-						custom_created = yes
-						culture = FROM
-						holder = FROM
-						base_title = THIS
-						mercenary = yes
-						ruler = "CAPTAIN"
-						ruler_female = "CAPTAIN"
-						foa = "CAPTAIN_FOA"
-					}
-				}
+			create_character = {
+				female = yes
+				random_traits = yes
 			}
-			FROM = {
-				set_defacto_liege = THIS
-				set_character_flag = is_mercenary_leader
-				add_trait = adventurer
-				add_character_modifier = { modifier = started_mercenary_company months = 30 }
-				any_spouse = {
-					death = {
-						death_reason = death_childbirth
-					}
-				}
-				create_character = {
-					female = yes
-					random_traits = yes
-				}
-				new_character = {
-					save_event_target_as = olaf_spouse
-					impregnate = FROM
-				}
-				add_spouse = event_target:olaf_spouse
+			new_character = {
+				save_event_target_as = olaf_spouse
+				impregnate = FROM
 			}
+			add_spouse = event_target:olaf_spouse
 			character_event = { id = ACS.6 }
-		}        
+        }       
 	}
 
 	option = {
