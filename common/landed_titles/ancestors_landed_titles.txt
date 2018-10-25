@@ -5,30 +5,34 @@ b_alsitah = {
 }
 
 d_mercenary_pentaghast = {
-	color = { 130 173 70 }
-	color2 = { 255 255 255 }
+	color={ 100 200 80 }
+	color2={ 255 255 255 }
 
-	capital = 621 # Kangly
+	capital = 354 # mantua
+	
+	# Hire Trigger
+	allow = {
+		religion_group = christian
+	}
 	
 	# Parent Religion 
 	religion = catholic
-	culture = turkish
 	
 	mercenary = yes
 
-	title = "CAPTAIN"
-	foa = "CAPTAIN_FOA"
+	title = "CONDOTTIERO"
+	foa = "CONDOTTIERO_FOA"
 
 	# Always exists
 	landless = yes
 	
 	# Cannot be held as a secondary title
 	primary = yes
-	
+		
 	# Cannot be vassalized
 	independent = yes
 	
-	strength_growth_per_century = 1.00
-	
-	mercenary_type = muslim_turkic_company_composition
+	strength_growth_per_century = 1.0
+
+	mercenary_type = little_hat_company_composition
 }
