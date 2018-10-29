@@ -10,7 +10,7 @@ byakugan_harass_defend = { # Kaiten
 	}
 
 	mean_time_to_happen = {
-		days = 50
+		days = 100
 	}
 
 	light_infantry_defensive = 7

@@ -796,7 +796,7 @@ character_event = {
 	immediate = {
 		random_character = {
             limit = { has_landed_title = d_mercenary_sakya }
-            character_event = { id = ACS.5 }
+            character_event = { id = ACS.31 }
         }
 	}
 }
