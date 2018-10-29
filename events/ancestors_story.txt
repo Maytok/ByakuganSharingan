@@ -99,27 +99,6 @@ character_event = {
 			set_society_grandmaster = yes 
 			culture = khazar
 			dynasty = 300000
-			create_title = {
-				tier = KING
-				landless = yes
-				temporary = no
-				name = "THE_SAKJE"
-				holder = THIS
-				culture = THIS
-			}
-			spawn_unit = {
-				owner = THIS
-				province = 624
-				home = 624
-				troops = {
-					knights = { 10 10 }
-					horse_archers = { 100 100 }
-				}
-				earmark = tilda_starter
-				attrition = 0.0
-				maintenance_multiplier = 0.0
-			}
-			set_defacto_liege = THIS
 			character_event = { id = ACS.200 }
 			character_event = { id = ACS.30 } # Traveling around the world
 		}
@@ -143,7 +122,7 @@ character_event = {
 	}
 }
 
-# ACS.4 - ROOT: Olaf - Ping event
+# ACS.4 - Ping event. ROOT: Olaf
 character_event = {
 	id = ACS.4
 	hide_window = yes
@@ -153,22 +132,20 @@ character_event = {
 		random_character = {
             limit = { has_landed_title = d_mercenary_pentaghast }
             character_event = { id = ACS.5 }
-        }		
+        }
 	}
 }
 
-# ACS.5 - Spawn an army for Olaf
+# ACS.5 - Olaf goes to a mercenary band
 character_event = {
 	id = ACS.5
-	desc = EVTDESC.ACS.3
-	picture = GFX_evt_courtiers_talking
 	is_triggered_only = yes
+	hide_window = yes
 
 	immediate = {
 		FROM = {
             move_character = ROOT
 			add_trait = adventurer
-			add_character_modifier = { modifier = started_mercenary_company months = 30 }
 			any_spouse = {
 				death = {
 					death_reason = death_childbirth
@@ -182,13 +159,16 @@ character_event = {
 				save_event_target_as = olaf_spouse
 				impregnate = FROM
 			}
-			add_spouse = event_target:olaf_spouse
+			add_spouse = event_target:olaf_spouse			
+        } 
+		FROMFROM = {
 			character_event = { id = ACS.6 }
-        }       
+		}      
 	}
 
 	option = {
 		name = OK
+		ai_chance = { factor = 100 }
 	}
 }
 
@@ -203,7 +183,6 @@ character_event = {
 		name = OK
 	}
 }
-
 
 # ACS.7 - Create Vee and Khalga
 character_event = {
@@ -815,178 +794,23 @@ character_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		random_province = {
-			limit = {
-				region = world_steppe
-				terrain = steppe
-			}
-			holder_scope = {
-				spawn_unit = {
-					owner = ROOT
-					province = PREV
-					home = PREV
-					troops = {
-						knights = { 5 5 }
-						horse_archers = { 100 100 }
-					}
-					earmark = tilda_troops_a
-					attrition = 0.0
-					maintenance_multiplier = 0.0
-				}
-			}
-		}
-		set_character_flag = moved_tilda
-		disband_event_forces = tilda_starter
+		random_character = {
+            limit = { has_landed_title = d_mercenary_sakya }
+            character_event = { id = ACS.5 }
+        }
 	}
 }
 
-######################################################
-# ACS.31 - BEGIN Periodical event for nomadic Tilda ##
-######################################################
+# ACS.31 - Tilda goes to mercenary band
 character_event = {
 	id = ACS.31
-	hide_window = yes
 	is_triggered_only = yes
-	has_character_flag = is_ancient_one
-
-	trigger = {
-		NOT = { has_character_flag = in_nomadic_migration }
-		is_landed = no
-	}
-
-	immediate = {
-		set_character_flag = in_nomadic_migration
-		set_character_flag = tilda_first_period
-		clr_character_flag = tilda_fourth_period
-		location = {
-			random_neighbor_province = {
-				limit = {
-					region = world_steppe                    
-				}
-				holder_scope = {
-					spawn_unit = {
-						owner = ROOT
-						province = PREV
-						home = PREV
-						troops = {
-							knights = { 5 5 }
-							horse_archers = { 100 100 }
-						}
-						earmark = tilda_troops_b
-						attrition = 0.0
-						maintenance_multiplier = 0.0
-					}
-				}
-			}            
-		}
-		disband_event_forces = tilda_troops_a
-		disband_event_forces = tilda_troops_e
-		ROOT = { character_event = { id = ACS.32 days = 60} }             
-	}
-}
-
-# ACS.32 - Periodical event for nomadic Tilda
-character_event = {
-	id = ACS.32
 	hide_window = yes
-	is_triggered_only = yes    
 
 	immediate = {
-		clr_character_flag = tilda_first_period
-		set_character_flag = tilda_second_period
-		location = {
-			random_neighbor_province = {
-				limit = {
-					region = world_steppe
-				}
-				holder_scope = {
-					spawn_unit = {
-						owner = ROOT
-						province = PREV
-						home = PREV
-						troops = {
-							knights = { 5 5 }
-							horse_archers = { 100 100 }
-						}
-						earmark = tilda_troops_c
-						attrition = 0.0
-						maintenance_multiplier = 0.0
-					}
-				}
-			}            
-		}
-		disband_event_forces = tilda_troops_b
-		ROOT = { character_event = { id = ACS.33 days = 60} }             
-	}
-}
-
-# ACS.33 - Periodical event for nomadic Tilda
-character_event = {
-	id = ACS.33
-	hide_window = yes
-	is_triggered_only = yes    
-
-	immediate = {
-		clr_character_flag = tilda_second_period
-		set_character_flag = tilda_third_period
-		location = {
-			random_neighbor_province = {
-				limit = {
-					region = world_steppe
-				}
-				holder_scope = {
-					spawn_unit = {
-						owner = ROOT
-						province = PREV
-						home = PREV
-						troops = {
-							knights = { 5 5 }
-							horse_archers = { 100 100 }
-						}
-						earmark = tilda_troops_d
-						attrition = 0.0
-						maintenance_multiplier = 0.0
-					}
-				}
-			}            
-		}
-		disband_event_forces = tilda_troops_c
-		ROOT = { character_event = { id = ACS.34 days = 60} }             
-	}
-}
-
-# ACS.34 - Periodical event for nomadic Tilda
-character_event = {
-	id = ACS.34
-	hide_window = yes
-	is_triggered_only = yes    
-
-	immediate = {
-		clr_character_flag = tilda_third_period
-		set_character_flag = tilda_fourth_period       
-		location = {
-			random_neighbor_province = {
-				limit = {
-					region = world_steppe
-				}
-				holder_scope = {
-					spawn_unit = {
-						owner = ROOT
-						province = PREV
-						home = PREV
-						troops = {
-							knights = { 5 5 }
-							horse_archers = { 100 100 }
-						}
-						earmark = tilda_troops_e
-						attrition = 0.0
-						maintenance_multiplier = 0.0
-					}
-				}
-			}            
-		}
-		disband_event_forces = tilda_troops_d
-		clr_character_flag = in_nomadic_migration
+		FROM = {
+            move_character = ROOT			
+        }
 	}
 }
 

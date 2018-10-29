@@ -1,0 +1,53 @@
+byakugan_harass_defend = { # Kaiten
+	days = 2
+	sprite = 2
+	group = defensive
+
+	trigger = {
+		phase = skirmish
+        flank_has_leader = yes
+        leader = { trait = byakugan }
+	}
+
+	mean_time_to_happen = {
+		days = 50
+	}
+
+	light_infantry_defensive = 7
+	heavy_infantry_defensive = 7
+	pikemen_defensive = 7
+	archers_offensive = 0.6
+	light_cavalry_defensive = 7
+	camel_cavalry_defensive = 7
+	knights_defensive = 7
+	horse_archers_defensive = 7
+}
+
+exploit_undefended_byakugan_tactic = {
+	days = 1
+	sprite = 5
+	group = charge
+	
+	trigger = {
+		phase = skirmish
+        flank_has_leader = yes
+        leader = { trait = byakugan }
+		is_flanking = no
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 100
+			enemy = {
+				troops = {
+					who = archers
+					value = 0.25
+				}
+			}
+		}
+	}
+	
+	change_phase_to = melee
+    knights_offensive = 30
+}

@@ -22,33 +22,38 @@ There were two secret societies from ancestral times: Pentaghast and Sakya. Both
 
 ### Traits
 
-- **Ojos malva**: Un Byakugan. Otorga bonus para defenderse de complots, habilidad de combate y atributos base.
-- **Ojos carmes√≠**: Un Sharingan. Otorga mayor capacidad de √©xito en los complots, habilidad de combate y atributos base.
+#### Ojos malva
 
-Es importante se√±alar que los traits aun est√°n en desarrollo y sus capacidades podr√≠an cambiar en un futuro. Si piensas que est√°n mal, puedes comentarlo en la p√°gina de discusiones.
+</p>
+Un Byakugan. Otorga bonus para defenderse de complots, habilidad de combate y atributos base. Los efectos adicionales que brindan son:
+</p>
 
+- **Ojos malva**: 
+- **Ojos carmesÌ≠**: Un Sharingan. Otorga mayor capacidad de Èxito en los complots, habilidad de combate y atributos base.
+
+Es importante seÒalar que los traits aun est·n en desarrollo y sus capacidades podrÌan cambiar en un futuro. Si tienes ideas de los cambios que puede hacerse, puedes comentarlo en la p·gina de discusiones. Tu opiniÛn me importa mucho.
 
 ### Vee and Khalga
 
-The two main characters from the mod, the entire narrative revolves around them. At first they are two twin brothers, but their destinies soon separate and each follows different paths. Neither is playable unless you are very lucky.
+The two main characters from the mod, the entire narrative revolves around them. At first they are two twin brothers, but their destinies soon separate and each follows different paths.
 
 Vee is, if you accept her, the closest character of the two to you. She is considered the most beautiful woman in the world and her presence in your court will give you bonuses and special events:
 
-- **Modificador especial**: La presencia de Vee en tu corte te garantiza un punto adicional de prestigio mensual. Son las ventajas de tener como cortesana a la mujer m√°s bella del mundo.
-- **Nuevo Casus Belli**: La presencia de Vee en tu corte tambi√©n te causa problemas. Cualquier persona con tieras te podr√° declarar la guerra por ella. Si pierdes, Vee ir√° a la corte del ganador de la guerra. 
-- **Ojos carmes√≠**: Vee presenta un rasgo distintivo (cof, cof, un sharingan) que le da ventajas especiales. El rasgo es capaz de evolucionar mediante eventos especiales y hacerse m√°s poderoso. Tambi√©n se puede heredar, lo que permite que crees tu programa gen√©tico a largo plazo. ¬°Incluso t√∫ podr√≠as poseerlo si planificas bien tu dinast√≠a!
-- **Semi-inmortalidad**: Vee, o al menos su esencia, vivir√° a lo largo de toda la narrativa, pero necesita un cuerpo nuevo para transferirse cuando al viejo le llegue la hora. Solo puede transferirse a una de sus hijas, que ser√° el nuevo recipiente. El evento se repita cada 33 a√±os y se anular√° si Vee muere.
+- **Modificador especial**: La presencia de Vee en tu corte te garantiza un punto adicional de prestigio mensual. Son las ventajas de tener como cortesana a la mujer m·s bella del mundo.
+- **Nuevo Casus Belli**: La presencia de Vee en tu corte tambiÈn te causa problemas. Cualquier persona con tierras te podr· declarar la guerra por ella. Si pierdes, Vee ir· a la corte del ganador de la guerra. 
+- **Ojos carmesÌ≠**: Vee es la portadora original de los ojos carmesÌ. El rasgo es capaz de evolucionar mediante eventos especiales y hacerse m·s poderoso. TambiÈn se puede heredar, lo que permite que crees tu programa genÈtico a largo plazo. °Incluso t˙ podrÌ≠as poseerlo si planificas bien tu dinastÌ≠a!
+- **Semi-inmortalidad**: Vee, o al menos su esencia, vivir· a lo largo de toda la narrativa, pero necesita un cuerpo nuevo para transferirse cuando al viejo le llegue la hora. Solo puede transferirse a una de sus hijas, que ser· el nuevo recipiente. El evento se repita cada 33 aÒos y se anular· si Vee muere.
 
-Por otro lado, Khalga es la contraparte. Puede ser el opositor del juego, o quiz√° no, todo depende de los eventos que experimente y tus propias decisiones. Khalga tambi√©n tiene un conjunto de caracter√≠sticas:
+Por otro lado, Khalga es la contraparte. Puede ser el opositor del juego, o quiz· no, todo depende de los eventos que experimente y tus propias decisiones. Khalga tambiÈn tiene un conjunto de caracterÌ≠sticas:
 
-- **Inmortalidad completa**: Khalga no puede morir de vejez y tiene una elevada resistencia a la enfermedad. Puede morir asesinado o por un accidente, pero su esencia se transfiere de inmediato a cualquier mujer, que concibe a un ni√±o con las mismas acarcter√≠sticas base.
-- **Ojos Malva**: Un (cof, cof, Byakugan) rasgo que da una serie de ventajas. Como el rasgo de Vee, es transmisible a sus hijos y puede ser usado como programa gen√©tico en la narrativa.
-- **Nomadismo**: Khalga nunca se queda en un sitio. Migra peri√≥dicamente, recorriendo el mundo, as√≠ que es dif√≠cil que lo encuentres. Es un licencioso amante de las aventuras y va dejando su progenie por donde pasa. Pero, si visita tu corte y no le gustas, *deber√≠as preocuparte*.
+- **Inmortalidad completa**: Khalga no puede morir de vejez y tiene una elevada resistencia a la enfermedad. Puede morir asesinado o por un accidente, pero su esencia se transfiere de inmediato a cualquier mujer, que concibe a un niÒo con las mismas carcterÌ≠sticas base.
+- **Ojos Malva**: Un (cof, cof, Byakugan) rasgo que da una serie de ventajas. Como el rasgo de Vee, es transmisible a sus hijos y puede ser usado como programa genÈtico en la narrativa.
+- **Nomadismo**: Khalga nunca se queda en un sitio. Migra periÛdicamente, recorriendo el mundo, asÌ≠ que es difÌ≠cil que lo encuentres. Es un licencioso amante de las aventuras y va dejando su progenie por donde pasa. Si visita tu corte y no le gustas, *deberÌ≠as preocuparte*.
 
 ### Sociedades
 
-Dos seres tan peculiares deber√≠an tener sus seguidores. La respuesta a esto son los Pentaghast y los Sakya, dos sociedades con una historia en com√∫n y enemigos entre s√≠. 
+Dos seres tan peculiares deberÌ≠an tener sus seguidores. La respuesta a esto son los Pentaghast y los Sakya, dos sociedades con una historia en com˙n y enemigos entre sÌ≠. 
 
-*Las caracter√≠sticas, motivaciones y sensaciones especiales de estas dos sociedades a√∫n est√°n en desarrollo.*
+*Las caracterÌ≠sticas, motivaciones y sensaciones especiales de estas dos sociedades a˙n est·n en desarrollo.*
 
 

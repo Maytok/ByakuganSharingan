@@ -2,13 +2,7 @@ d_mercenary_pentaghast = {
 	color={ 100 200 80 }
 	color2={ 255 255 255 }
 
-	capital = 354 # mantua
-	
-	# Hire Trigger
-	allow = {
-		religion_group = christian
-	}
-	
+	capital = 354 # mantua		
 	# Parent Religion 
 	religion = catholic
 	
@@ -28,11 +22,32 @@ d_mercenary_pentaghast = {
 	
 	strength_growth_per_century = 1.0
 
-	mercenary_type = little_hat_company_composition
+	mercenary_type = pentaghast_composition
 }
 
-b_alsitah = {
-	bodpa = "Al-Sitah"
-	han = "Al-Sitah"
-	holy_site = ishtar_religion
+d_mercenary_sakya = {
+	color={ 100 200 80 }
+	color2={ 255 255 255 }
+
+	capital = 354 # mantua		
+	# Parent Religion 
+	religion = catholic
+	
+	mercenary = yes
+
+	title = "CONDOTTIERO"
+	foa = "CONDOTTIERO_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+		
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.0
+
+	mercenary_type = sakya_composition
 }
