@@ -6,7 +6,7 @@ jewel_of_soul = {
 }
 
 jewel_of_bless = {
-	stacking = yes
+	stacking = yesgit 
 	flags = { ancient jewel }
 	picture = "GFX_jewel_of_bless"
 	slot = weapon
