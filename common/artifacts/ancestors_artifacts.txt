@@ -23,5 +23,4 @@ eden_apple = {
 	indestructible = yes
 	picture = "GFX_eden_apple"
 	learning = 9
-	intrigue = 6
 }
