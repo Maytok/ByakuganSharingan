@@ -633,7 +633,7 @@ character_event = {
 		is_pregnant = no        
 		is_incapable = no
 		prisoner = no
-		# has_character_flag = awaken_vee
+		has_character_flag = awaken_vee
 	}    
 
 	option = {
@@ -787,7 +787,7 @@ character_event = {
 }
 
 
-# ACS.30 - Set Tilda clan to a random steppe province
+# ACS.30 - Move tilda to mercenary Sakya - TODO = give title to her
 character_event = {
 	id = ACS.30
 	hide_window = yes
@@ -1027,4 +1027,107 @@ character_event = {
     		impregnate = event_target:male_pentaghast_eugenesia
     	}
     }
+}
+
+# ACS.41 - Vee reaches adulthood
+character_event = {
+	id = ACS.41
+	hide_window = yes
+	is_triggered_only = yes
+	has_character_flag = is_vee
+
+	immediate = {
+		ROOT = {
+			set_character_flag = do_not_disturb
+		}
+		pentaghast_society = {
+			any_society_member = {
+				narrative_event = { id = ACS.42 }
+			}
+		}
+	}
+}
+
+
+# ACS.42 - Society members receive the invitation
+narrative_event = {
+	id = ACS.42	
+	title = EVTNAMEACS.42
+	desc = EVTDESCACS.42
+	picture = GFX_evt_emissary_byzantine
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				prisoner = no
+				age >= 18
+				is_incapable = no
+				NOT = { has_character_flag = do_not_disturb}
+			}
+			set_character_flag = do_not_disturb			
+		}
+		FROM = {			
+			character_event = { id = ACS.43 } 
+		}
+	}
+
+	option = {
+		name = OK
+		ai_chance = { factor = 100 }
+	}
+}
+
+# ACS.43 - Select a random Pentaghast society member for pollinate Vee
+character_event = {
+	id = ACS.43
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		pentaghast_society = {
+			random_society_member = {
+				limit = {
+					is_female = no
+					is_society_grandmaster = no
+				}
+				save_event_target_as = selected_pentaghast
+				set_character_flag = selected_pentaghast_flag
+			}
+			any_society_member = {
+				narrative_event = { id = ACS.44 }
+			}
+		}
+		ROOT = {
+			impregnate_cuckoo = event_target:selected_pentaghast
+			set_character_flag = awaken_vee
+		}
+	}
+}
+
+# ACS.44 - Pentaghast members receive notification for accomplished orgiastic ritual
+narrative_event = {
+	id = ACS.44
+	title = EVTNAMEACS.44
+	desc = EVTDESCACS.44
+	picture = GFX_evt_emissary_byzantine
+	is_triggered_only = yes
+
+	immediate = {
+		pentaghast_society = {
+			random_society_member = {
+				limit = {
+					has_character_flag = selected_pentaghast_flag
+				}
+				death = {
+					death_reason = death_murder_unknown
+				}
+			}
+		}
+	}
+
+	option = {
+		name = OK
+		ai_chance = { factor = 100 }
+	}
 }

@@ -14,6 +14,8 @@
 	<a><img src="https://img.shields.io/badge/Maker-take%20you!-red.svg" alt="Cassandra Shout"></a>	
 </p>
 
+<h4 align="center"Disclaimer: This is not a Naruto mod</h4>
+
 <p>	
 There were two secret societies from ancestral times: Pentaghast and Sakya. Both remained in eternal struggle, one against the other, until the Sakya managed to prevail. However, the Pentaghast have returned from their bitter exile and are now ready for revenge.
 </p>

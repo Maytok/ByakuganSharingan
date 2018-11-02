@@ -45,3 +45,9 @@ on_birth = {
 		ACS.29 # Dojutsu inheritance mechanics
 	}
 }
+
+on_adulthood = {
+	events = {
+		ACS.41  # first Vee impregnation
+	}
+}

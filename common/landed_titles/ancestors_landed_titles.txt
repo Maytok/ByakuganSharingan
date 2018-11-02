@@ -31,7 +31,7 @@ d_mercenary_sakya = {
 
 	capital = 354 # mantua		
 	# Parent Religion 
-	religion = catholic
+	religion = buddhist
 	
 	mercenary = yes
 
