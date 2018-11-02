@@ -16,13 +16,13 @@ narrative_event = {
 	option = {
 		name = EVTOPTA.ACS.1
 		set_global_flag = comet_tiamat
-		character_event = { id = ACS.2 days = 13 }
-		character_event = { id = ACS.3 days = 45 }
+		narrative_event = { id = ACS.2 days = 13 }
+		character_event = { id = ACS.3 days = 60 }
 	}
 }
 
 # ACS.2 - Spawn Senua, Olaf and Tilda
-character_event = {
+narrative_event = {
 	id = ACS.2
 	title = EVTTITLE.ACS.2
 	desc = EVTDESC.ACS.2
