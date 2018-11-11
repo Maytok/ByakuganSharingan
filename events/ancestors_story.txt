@@ -292,7 +292,7 @@ narrative_event = {
 	}
 }
 
-# ACS.10 - Al-Sitah holder receives Khalga
+# ACS.10 - Tilda receives Khalga
 character_event = {
 	id = ACS.10
 	hide_window = yes    
@@ -469,7 +469,7 @@ character_event = {
 }
 
 
-# ACS.18 - Select AlSitah province holder
+# ACS.18 - Select Tilda
 character_event = {
 	id = ACS.18
 	hide_window = yes
@@ -812,7 +812,7 @@ character_event = {
 	immediate = {
 		FROM = {
             move_character = ROOT	
-			d_mercenary_pentaghast = {
+			d_mercenary_sakya = {
                 grant_title = PREV
             	set_defacto_liege = THIS
 			}		
