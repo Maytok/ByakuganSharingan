@@ -1,1 +1,5 @@
 *.txt linguist-language=Python
+*.csv linguist-language=Ruby
+*.md linguist-language=Go
+*.dds linguist-language=Elixir
+*.gfx linguist-language=C++
