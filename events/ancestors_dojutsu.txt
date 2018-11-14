@@ -34,6 +34,7 @@ character_event = {
     	event_target:wants_to_get_mangekyo = {
     		remove_trait = sharingan
     		add_trait = mangekyo_sharingan
+			add_trait = stressed
     	}
     	death = {
     		death_reason = death_murder_unknown killer = event_target:wants_to_get_mangekyo
@@ -75,7 +76,6 @@ character_event = {
 					}
 					factor = 2
 				}
-				long_character_event = { id = WoL.11009 }
 				FROM = {
 					death = {
 						death_reason = death_duel killer = ROOT
@@ -160,6 +160,8 @@ character_event = {
 						}
 						remove_trait = sharingan
 						add_trait = mangekyo_sharingan
+						add_trait=stressed
+						clr_character_flag = wants_to_get_mangekyo
 					}
 					5 = {
 						modifier = {
@@ -177,6 +179,8 @@ character_event = {
 						}
 						remove_trait = sharingan
 						add_trait = mangekyo_sharingan
+						add_trait = stressed
+						clr_character_flag = wants_to_get_mangekyo
 						random_list = {
 							30 = { add_trait = disfigured }
 							30 = { add_trait = one_eyed }
