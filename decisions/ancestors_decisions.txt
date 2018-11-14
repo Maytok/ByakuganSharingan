@@ -95,14 +95,15 @@ targetted_decisions = {
 				opinion = {
 					modifier = opinion_hypnotized_with_sharingan
 					who = FROM
-					years = 100
-				}
-				# add_character_flag = hypnotized_with_sharingan
+					years = 3
+				}				
+				set_character_flag = hypnotized_with_sharingan
 			}
 			
 			FROM = {
-				# add_character_flag = use_sharingan_for_hypnotic
+				set_character_flag = use_sharingan_for_hypnotic
 				add_trait = stressed
+				add_favor = ROOT
 			}
 		}
 	}
