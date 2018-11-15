@@ -22,7 +22,7 @@ ishtar_group = {
 	ishtar_religion = {
 		graphical_culture = westerngfx
 
-		icon = 57
+		icon = 60
 		heresy_icon = 6
 		
 		color = { 0.8 0.0 0.2 }
