@@ -55,7 +55,7 @@ targetted_decisions = {
 		    FROM = { set_character_flag = wants_to_get_mangekyo }
 		    ROOT = {
 		    	set_character_flag = target_for_mangekyo
-		    	character_event = { id = ACS.400 }
+		    	character_event = { id = ACS.400 days = 2 }
 		    }
 		}
 

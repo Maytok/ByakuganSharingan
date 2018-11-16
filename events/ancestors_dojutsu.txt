@@ -13,40 +13,18 @@ character_event = {
 			limit = {
 				has_character_flag = wants_to_get_mangekyo
 			}
-			save_event_target_as = wants_to_get_mangekyo
+			set_character_flag = mangekyo_immediate
+			save_event_target_as = target_wants_to_get_mangekyo			
 		}
 	}
 
     option = {
-    	name = EVTOPTA_ACS_400
-    	ai_chance = {
-    		factor = 100
-    		modifier = {
-    			factor = 0
-    			NOT = { is_lover = event_target:wants_to_get_mangekyo }
-    		}
-    		modifier = {
-    			factor = 0
-    			trait = ambitious
-    		}
-    	}
-
-    	event_target:wants_to_get_mangekyo = {
-    		remove_trait = sharingan
-    		add_trait = mangekyo_sharingan
-			add_trait = stressed
-    	}
-    	death = {
-    		death_reason = death_murder_unknown killer = event_target:wants_to_get_mangekyo
-    	}
-    }
-
-    option = {
     	name = EVTOPTB_ACS_400
     	ai_chance = {
-    		factor = 1
+    		factor = 100
     	}
-    	event_target:wants_to_get_mangekyo = {
+    	event_target:target_wants_to_get_mangekyo = {
+			set_character_flag = mangekyo_option
     		character_event = { id = ACS.401 }
     	}
     }
@@ -148,11 +126,7 @@ character_event = {
 				}
 				### effects
 				random_list = {
-					95 = {						
-						add_character_modifier = {
-							modifier = recent_duel_victory
-							months = 12
-						}
+					95 = {
 						FROM = {
 							death = {
 								death_reason = death_murder_unknown killer = ROOT
@@ -162,15 +136,12 @@ character_event = {
 						add_trait = mangekyo_sharingan
 						add_trait=stressed
 						clr_character_flag = wants_to_get_mangekyo
+						character_event = { id = ACS.402 }
 					}
 					5 = {
 						modifier = {
 							FROM = { is_maimed_trigger = yes }
 							factor = 0
-						}
-						add_character_modifier = {
-							modifier = recent_duel_victory
-							months = 12
 						}
 						FROM = {
 							death = {
@@ -181,6 +152,7 @@ character_event = {
 						add_trait = mangekyo_sharingan
 						add_trait = stressed
 						clr_character_flag = wants_to_get_mangekyo
+						character_event = { id = ACS.402 }
 						random_list = {
 							30 = { add_trait = disfigured }
 							30 = { add_trait = one_eyed }
@@ -240,10 +212,6 @@ character_event = {
 				random_list = {
 					50 = {
 						FROM = {
-							add_character_modifier = {
-								modifier = recent_duel_victory
-								months = 12
-							}
 							clr_character_flag = target_for_mangekyo
 						}
 						death = {
@@ -256,10 +224,6 @@ character_event = {
 							factor = 0
 						}
 						FROM = {
-							add_character_modifier = {
-								modifier = recent_duel_victory
-								months = 12
-							}
 							random_list = {
 								10 = { add_trait = disfigured }
 								30 = { add_trait = one_eyed }
@@ -276,4 +240,30 @@ character_event = {
 			}
 		}
     }
-}		
+}	
+
+character_event = {
+	id = ACS.402
+	picture = GFX_evt_yasaka_magatama
+	is_triggered_only = yes	
+	title = ACS.402.name
+
+	desc = {
+		trigger = {
+			has_character_flag = get_mangekyo_by_love
+		}
+		text = EVTDESC_ACS401_A
+	}
+
+	desc = {
+		trigger = {
+			NOT = { has_character_flag = get_mangekyo_by_love }
+		}
+		text = EVTDESC_ACS401_B
+	}
+
+	option = {
+		name = OK
+		ai_chance = { factor = 100 }
+	}
+}
