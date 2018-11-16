@@ -162,7 +162,11 @@ character_event = {
 				save_event_target_as = olaf_spouse
 				impregnate = FROM
 			}
-			add_spouse = event_target:olaf_spouse			
+			add_spouse = event_target:olaf_spouse
+			d_mercenary_pentaghast = {
+				grant_title = PREV
+            	set_defacto_liege = THIS
+			}
         } 
 		FROMFROM = {
 			character_event = { id = ACS.6 }
@@ -271,7 +275,6 @@ narrative_event = {
 	title = EVTTITLE_ACS_9
 	desc = EVTDESC_ACS_9
 	picture = GFX_evt_machines_of_war
-	border = GFX_event_normal_frame_intrigue
 	is_triggered_only = yes
 
 	immediate = {
@@ -689,7 +692,6 @@ character_event = {
 character_event = {
 	id = ACS.28
 	desc = EVTDESC.ACS.28
-	border = GFX_event_letter_frame_war
 	picture = GFX_evt_courtiers_talking
 	is_triggered_only = yes
 
