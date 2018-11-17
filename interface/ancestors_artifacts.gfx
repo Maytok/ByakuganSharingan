@@ -17,7 +17,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_eden_apple"
-		texturefile = "gfx\\interface\\inventory\\artifacts\\eden_apple_.dds"
+		texturefile = "gfx\\interface\\inventory\\artifacts\\eden_apple.dds"
 	}
 	spriteType = {
 		name = "GFX_eden_apple_small"

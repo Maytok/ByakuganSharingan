@@ -149,6 +149,10 @@ character_event = {
 		FROM = {
             move_character = ROOT
 			add_trait = adventurer
+			d_mercenary_pentaghast = {
+				grant_title = PREV
+            	set_defacto_liege = THIS
+			}
 			any_spouse = {
 				death = {
 					death_reason = death_childbirth
@@ -160,13 +164,9 @@ character_event = {
 			}
 			new_character = {
 				save_event_target_as = olaf_spouse
-				impregnate = FROM
 			}
 			add_spouse = event_target:olaf_spouse
-			d_mercenary_pentaghast = {
-				grant_title = PREV
-            	set_defacto_liege = THIS
-			}
+			
         } 
 		FROMFROM = {
 			character_event = { id = ACS.6 }
@@ -957,7 +957,6 @@ character_event = {
     hide_window = yes
     is_triggered_only = yes
 
-    only_playable = yes
     is_in_society = yes
 
     trigger = {
@@ -966,24 +965,14 @@ character_event = {
     }
 
     immediate = {
-    	random_character = {
-    		limit = {
-    			OR = {
-    				trait = sharingan
-    				trait = byakugan
-    				trait = mangekyo_sharingan
-    			}
-    			NOT = { trait = in_hiding }
-    			age <= 7
-    			ai = yes
-    			is_incapable = no
-    			NOT = { has_character_flag = is_vee }
-    			NOT = { has_character_flag = is_khalga }
-    		}
-    		move_character = ROOT
-    		imprison = yes
-    		add_trait = prevent_marriage
-    	}
+		ROOT = {
+			if = {
+				limit = {
+					num_of_prisoners <= 50
+				}
+				character_event = { id = ACS.45 }
+			}
+		}
     }
 }
 
@@ -993,7 +982,6 @@ character_event = {
     hide_window = yes
     is_triggered_only = yes
 
-    only_playable = yes
     is_in_society = yes
 
     trigger = {
@@ -1138,4 +1126,33 @@ narrative_event = {
 		name = OK
 		ai_chance = { factor = 100 }
 	}
+}
+
+# ACS.45 - Select a random children to kidnapping
+character_event = {
+	id = ACS.45
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		random_character = {
+    		limit = {
+    			OR = {
+    				trait = sharingan
+    				trait = byakugan
+    				trait = mangekyo_sharingan
+    			}
+    			NOT = { trait = in_hiding }
+    			age <= 4
+    			ai = yes
+    			is_incapable = no
+				is_landed = no
+    			NOT = { has_character_flag = is_vee }
+    			NOT = { has_character_flag = is_khalga }
+    		}
+    		move_character = ROOT
+    		imprison = yes
+    		add_trait = prevent_marriage
+    	}
+	}	
 }
