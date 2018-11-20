@@ -212,8 +212,7 @@ narrative_event = {
 			trait = syrena
 		}
 		new_character = {
-			set_mother = ROOT
-			set_real_father = FROM       
+			set_mother = ROOT   
 			set_character_flag = is_vee
 			set_character_flag = originated_from_chinese_court # to prevent to go to China
 			set_focus = focus_ch_heritage
@@ -235,8 +234,7 @@ narrative_event = {
 			trait = khalga_pilgrim
 		}
 		new_character = {
-			set_mother = ROOT
-			set_real_father = FROM          
+			set_mother = ROOT    
 			set_character_flag = is_khalga
 			set_character_flag = originated_from_chinese_court # to prevent to go to China
 			set_focus = focus_ch_heritage
@@ -1140,7 +1138,6 @@ character_event = {
     			OR = {
     				trait = sharingan
     				trait = byakugan
-    				trait = mangekyo_sharingan
     			}
     			NOT = { trait = in_hiding }
     			age <= 4

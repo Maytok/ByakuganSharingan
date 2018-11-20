@@ -8,8 +8,7 @@ on_yearly_pulse = {
 	events = {
 		ACS.11 # Khalga go around the world every year, searching evil characters - select the target
 		ACS.22 # Control Vee age. No more than 33
-		ACS.31 # Periodic migration for Tilda
-		ACS.39 # Kidnap a dojutsu child every year
+		ACS.31 # Periodic migration for Tilda		
 		ACS.40 # Pentaghast leader makes reproduction between two dojutsu candidates
 	}
 }
@@ -17,7 +16,8 @@ on_yearly_pulse = {
 on_bi_yearly_pulse = {
 	events = {
 		ACS.25 # Vee cultivates many possible receptors
-		ACS.35 # Pentaghast infiltrates Venezia	
+		ACS.35 # Pentaghast infiltrates Venezia
+		ACS.39 # Kidnap a dojutsu child two years
 	}
 }
 
