@@ -7,17 +7,7 @@ ishtar_group = {
 	ai_convert_same_group = 2 # always try to convert
 	ai_convert_other_group = 2 # always try to convert
 	
-	color = { 0.8 0.8 0.6 }
-	
-	# Names given only to Christian characters (base names)
-	male_names = {
-		Anund Asbjörn Aslak Audun Bagge Balder Brage Egil Emund Frej Gnupa Gorm Gudmund Gudröd Hardeknud Helge Odd Orm 
-		Orvar Ottar Rikulfr Rurik Sigbjörn Styrbjörn Starkad Styrkar Sämund Sölve Sörkver Thorolf Tjudmund Toke Tolir 
-		Torbjörn Torbrand Torfinn Torgeir Toste Tyke
-	}
-	female_names = {
-		Aslaug Bothild Björg Freja Grima Gytha Kráka Malmfrid Thora Thordis Thyra Ragnfrid Ragnhild Svanhild Ulvhilde
-	}
+	color = { 0.86 0.07 0.23 }
 	
 	ishtar_religion = {
 		graphical_culture = westerngfx
@@ -25,7 +15,7 @@ ishtar_group = {
 		icon = 60
 		heresy_icon = 6
 		
-		color = { 0.8 0.0 0.2 }
+		color = { 0.86 0.07 0.23 }
 		
 		crusade_name = CRUSADE
 		scripture_name = THE_OLD_PAPIRES
@@ -58,12 +48,14 @@ ishtar_group = {
 		seafarer = yes
 		allow_rivermovement = yes
 		female_temple_holders = yes
-		aggression = 10.0
+		aggression = 2.0
 		divine_blood = yes
 		has_heir_designation = yes
 		peace_prestige_loss = yes
 		
 		religious_clothing_head = 0
 		religious_clothing_priest = 1
+
+		allow_in_ruler_designer = no
 	}	
 }
