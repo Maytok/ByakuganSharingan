@@ -1150,6 +1150,12 @@ character_event = {
     		move_character = ROOT
     		imprison = yes
     		add_trait = prevent_marriage
+			opinion = {
+				modifier = monarch_modifier
+				who = ROOT
+				years = 100
+			}
+			health = 5
     	}
 	}	
 }
