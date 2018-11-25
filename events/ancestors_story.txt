@@ -232,7 +232,7 @@ narrative_event = {
 			trait = khalga_pilgrim
 		}
 		new_character = {
-			set_mother = ROOT    
+			set_mother = ROOT
 			set_character_flag = is_khalga
 			set_character_flag = originated_from_chinese_court # to prevent to go to China
 			set_focus = focus_ch_heritage
@@ -259,9 +259,9 @@ narrative_event = {
 
 	option = {
 		name = OK
-		ROOT = {            
+		ROOT = {
 			narrative_event = { id = ACS.9 days = 15}
-		}       
+		}
 	}
 }
 
@@ -316,7 +316,7 @@ character_event = {
 	has_character_flag = is_khalga
 	min_age = 16
 
-	immediate = {       
+	immediate = {
 		random_playable_ruler = {
 			limit = {
 				adventurer = no
@@ -326,14 +326,14 @@ character_event = {
 				prisoner = no
 			}           
 			character_event = { id = ACS.12 days = 2 }
-		}        
+		}
 	}
 }
 
 # ACS.12 - Khalga moves to the foreign court
 character_event = {
 	id = ACS.12
-	hide_window = yes    
+	hide_window = yes
 	is_triggered_only = yes
 
 	immediate = {
