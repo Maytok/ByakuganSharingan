@@ -32,7 +32,6 @@ narrative_event = {
 	immediate = {
 		create_character = {
 			name = Senua
-			dna="senuahellbd"
 			female = yes
 			age = 17
 			culture = pictish
@@ -81,7 +80,6 @@ narrative_event = {
 		}
 		create_character = {
 			name = Tilda
-			dna="ancientonee"
 			female = yes
 			age = 33
 			culture = scottish
@@ -966,7 +964,7 @@ character_event = {
 		ROOT = {
 			if = {
 				limit = {
-					num_of_prisoners <= 50
+					num_of_prisoners <= 3
 				}
 				character_event = { id = ACS.45 }
 			}
