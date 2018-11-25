@@ -1139,7 +1139,7 @@ character_event = {
     				trait = sharingan
     				trait = byakugan
     			}
-				NOT = { at_location = ROOT }
+				NOT = { de_facto_liege = ROOT }
     			NOT = { trait = in_hiding }
     			age <= 4
     			ai = yes

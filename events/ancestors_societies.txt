@@ -115,6 +115,8 @@ character_event = {
             }
             create_character = {
                 name="Gunnr"
+                trait = ambitious
+			    trait = elusive_shadow
                 female = no
                 culture = FROM
                 religion = FROM                    
@@ -122,6 +124,8 @@ character_event = {
             new_character = { join_society = pentaghast_society society_rank_up = 3 set_secret_religion = ishtar_religion }
             create_character = {
                 name="Geirdriful"
+                trait = ambitious
+			    trait = elusive_shadow
                 female = no
                 culture = FROM
                 religion = FROM                    
@@ -129,6 +133,8 @@ character_event = {
             new_character = { join_society = pentaghast_society society_rank_up = 3 set_secret_religion = ishtar_religion }
             create_character = {
                 name="Eir"
+                trait = ambitious
+			    trait = elusive_shadow
                 female = no
                 culture = FROM
                 religion = FROM                    
@@ -136,6 +142,8 @@ character_event = {
             new_character = { join_society = pentaghast_society society_rank_up = 3 set_secret_religion = ishtar_religion }
             create_character = {
                 name="Kara"
+                trait = ambitious
+			    trait = elusive_shadow
                 female = no
                 culture = FROM
                 religion = FROM                    
@@ -143,6 +151,8 @@ character_event = {
             new_character = { join_society = pentaghast_society society_rank_up = 3 set_secret_religion = ishtar_religion }
             create_character = {
                 name="Rota"
+                trait = ambitious
+			    trait = elusive_shadow
                 female = no
                 culture = FROM
                 religion = FROM                    
@@ -150,6 +160,8 @@ character_event = {
             new_character = { join_society = pentaghast_society society_rank_up = 3 set_secret_religion = ishtar_religion }
             create_character = {
                 name="Olrun"
+                trait = ambitious
+			    trait = elusive_shadow
                 female = no
                 culture = FROM
                 religion = FROM                    
@@ -157,6 +169,8 @@ character_event = {
             new_character = { join_society = pentaghast_society society_rank_up = 3 set_secret_religion = ishtar_religion }
             create_character = {
                 name="Gondul"
+                trait = ambitious
+			    trait = elusive_shadow
                 female = no
                 culture = FROM
                 religion = FROM                    
@@ -164,6 +178,8 @@ character_event = {
             new_character = { join_society = pentaghast_society society_rank_up = 3 set_secret_religion = ishtar_religion }
             create_character = {
                 name="Hildr"
+                trait = ambitious
+			    trait = elusive_shadow
                 female = no
                 culture = FROM
                 religion = FROM                    
@@ -171,6 +187,8 @@ character_event = {
             new_character = { join_society = pentaghast_society society_rank_up = 3 set_secret_religion = ishtar_religion }
             create_character = {
                 name="Sigrun"
+                trait = ambitious
+			    trait = elusive_shadow
                 female = yes
                 culture = FROM
                 religion = FROM                    
