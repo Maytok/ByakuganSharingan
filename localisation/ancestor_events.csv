@@ -27,9 +27,16 @@ EVTDESC.ACS.21;The little girl in my court is getting more beautiful every day. 
 EVTDESC.ACS.28;;;;;El Avatar de nuestra diosa ha pasado a un nuevo recipiente. Cada vez se encuentra más cerca de la perfección y con ella, del dominio del resto del mundo.;;;;;;;;;x
 EVT_TT_ACS206;;;;;Adoraremos a nuestra diosa en el gran festival en su nombre;;;;;;;;;x
 had_pentaghast_fertility_ritual;;;;;Estuvo en una misteriosa reunión;;;;;;;;;x
-ACS25DESC;There is a man in the court who attracts me. Should I sleep with him?;Il y a un homme dans la cour qui m'attire. Dois-je dormir avec lui?;Da ist ein Mann im Gericht, der mich anzieht. Soll ich mit ihm schlafen?;;Hay un hombre en la corte que me atrae. ¿Debería acostarme con él?;;;;;;;;;x
+ACS25DESC;I miss my husband. Maybe we can stay together this night;I miss my husband. Maybe we can stay together this night;I miss my husband. Maybe we can stay together this night;;Extraño a mi esposo. Quizá podamos pasar juntos esta noche.;;;;;;;;;x
 ACS25OPTBA;That our bodies embrace in the bed;Que nos corps s'embrassent dans le lit;Dass unsere Korper sich im Bett umarmen;;Que nuestros cuerpos se mezclen en el lecho;;;;;;;;;x
 ACS25OPTB;I must dominate myself;Je dois me dominer;Ich muss mich beherrschen;;Debo dominarme;;;;;;;;;x
+ACS26DESC;My wife is seductive tonight. Maybe we can enjoy the love in the sweet bed.;My wife is seductive tonight. Maybe we can enjoy the love in the sweet bed.;My wife is seductive tonight. Maybe we can enjoy the love in the sweet bed.;;Mi esposa se muestra seductora esta noche. Quizá podamos disfrutar del amor en el dulce lecho.;;;;;;;;;x
+ACS_26_OPT_A;I can not resist her charms.;I can not resist her charms.;I can not resist her charms.;;No puedo resistirme a sus encantos.;;;;;;;;;x
+ACS_26_OPT_B;Leave me alone, lusty!;Leave me alone, lusty!;Leave me alone, lusty!;;¡Déjame en paz, lujuriosa!;;;;;;;;;x
+ACS_27_DESC;My wife and I have spent an intense night of pleasure. Now I feel bad.;My wife and I have spent an intense night of pleasure. Now I feel bad.;My wife and I have spent an intense night of pleasure. Now I feel bad.;;Mi esposa y yo hemos pasado una noche intensa de placer. Ahora me siento mal.;;;;;;;;;x
+ACS_27_OPT_A;The heaven has disadvantages;The heaven has disadvantages;The heaven has disadvantages;;El cielo tiene desventajas;;;;;;;;;x
+ACS_46_DESC;He has rejected me! I can not believe it;He has rejected me! I can not believe it;He has rejected me! I can not believe it;;¡Él me ha rechazado! No puedo creerlo;;;;;;;;;x
+ACS_46_OPT_A;Another will enjoy my favor;Another will enjoy my favor;Another will enjoy my favor;;Otro gozará de mi favor;;;;;;;;;x
 THE_SAKJE;The Sakje;The Sakje;The Sakje;;Los Sakje;;;;;;;;;x
 EVTDESC_ACS_400;My friend has come to me. There is resolution in his eyes. He wants to kill me to acquire more power!;My friend has come to me. There is resolution in his eyes. He wants to kill me to acquire more power!;My friend has come to me. There is resolution in his eyes. He wants to kill me to acquire more power!;;Mi amigo ha venido. En su mirada hay resolución. ¡Quiere matarme para adquirir más poder!;;;;;;;;;x
 EVTOPTA_ACS_400;I will sacrifice myself for love;I will sacrifice myself for love;I will sacrifice myself for love;;Me sacrificaré por amor;;;;;;;;;x

@@ -2,3 +2,12 @@ had_pentaghast_fertility_ritual = {
 	fertility = 0.2
 	icon = 75
 }
+
+devastated_by_tiamat = {
+	icon = 57
+	disease_defence = -1.0
+	local_revolt_risk = 5.0
+	tax_income = -1.0
+	local_build_cost_modifier = 5.0
+	local_build_time_modifier = 5.0
+}

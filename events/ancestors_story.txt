@@ -16,8 +16,9 @@ narrative_event = {
 	option = {
 		name = EVTOPTA.ACS.1
 		set_global_flag = comet_tiamat
-		narrative_event = { id = ACS.2 days = 13 }
-		character_event = { id = ACS.3 days = 60 }
+		location = {
+			add_province_modifier = { name = devastated_by_tiamat duration = -1 }
+		}
 	}
 }
 
@@ -622,7 +623,7 @@ character_event = {
 ### Vee impregnation events ##
 ##############################
 # ACS.25 - Procreate if she Vee can - ROOT: Vee. Select the candidate
-character_event = {
+narrative_event = {
 	id = ACS.25
 	desc = ACS25DESC
 	is_triggered_only = yes
@@ -630,7 +631,7 @@ character_event = {
 	picture = GFX_evt_vee_adolescense
 
 	trigger = {
-		age = 16
+		age >= 16
 		is_pregnant = no        
 		is_incapable = no
 		prisoner = no
@@ -638,49 +639,7 @@ character_event = {
 	}    
 
 	option = {
-		name = ACS25OPTBA
-		ai_chance = {
-			factor = 100
-		}
-		host = {
-			create_character = {
-			   female = no
-			   random_traits = yes
-			}
-			new_character = {
-				character_event = { id = ACS.26 }
-			}
-		}
-	}
-	option = {
-		ai_chance = {
-			factor = 0
-		}
-		name = ACS25OPTB
-	}
-}
-
-# ACS.26 - Ping event Vee impregnation
-character_event = {
-	id = ACS.26
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-		FROM = {
-			character_event = { id = ACS.27 }
-		}
-	}
-}
-
-# ACS.27 - Vee gets pregnancy
-character_event = {
-	id = ACS.27
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-		impregnate_cuckoo = FROM
+		name = OK		
 	}
 }
 
@@ -1157,4 +1116,38 @@ character_event = {
 			health = 5
     	}
 	}	
+}
+
+# ACS.47 - Tiamat comet causes devastation
+province_event = {
+	id = ACS.47
+	hide_window = yes
+	is_triggered_only = yes    
+
+	immediate = { # Select random 5 provinces not the character player
+		set_variable = { which = count value = 5 }
+		while = {
+            limit = {
+                check_variable = {
+                    which = count
+                    value = 1
+                }
+            }
+            subtract_variable = {
+                which = count
+                value = 1
+            }
+			random_neighbor_province = {
+				limit = {
+					NOT = { owner = { character = FROM } }
+				}
+				add_province_modifier = devastated_by_tiamat
+				owner = {
+					character = {
+						character_event = { id = ACS.48 }
+					}					
+				}				
+			}
+        }
+	}
 }
