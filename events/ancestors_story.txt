@@ -103,6 +103,7 @@ narrative_event = {
 			culture = scottish
 			religion = buddhist
 			trait = mystic
+			trait = prevent_marriage
 			trait = quick
 			trait = strong
 			trait = shrewd
@@ -785,10 +786,6 @@ character_event = {
 	immediate = {
 		FROM = {
             move_character = ROOT	
-			d_mercenary_sakya = {
-                grant_title = PREV
-            	set_defacto_liege = THIS
-			}		
         }		
 	}
 }
