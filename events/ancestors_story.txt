@@ -48,6 +48,7 @@ narrative_event = {
 	is_triggered_only = yes
 
 	immediate = {
+		character_event = { id = ACS.3 days = 120 } # Olaf leaves the court in two months
 		create_character = {
 			name = Senua
 			female = yes
@@ -66,7 +67,7 @@ narrative_event = {
 		}
 		new_character = {                        
 			set_character_flag = is_senua
-			narrative_event = { id = ACS.7 days = 30 }
+			narrative_event = { id = ACS.7 days = 15 }
 			dynasty = 300001
 			join_society = pentaghast_society
 			set_secret_religion = ishtar_religion
@@ -85,6 +86,7 @@ narrative_event = {
 			trait = hunter
 			trait = diligent
 			trait = lustful
+			trait = prevent_marriage
 			health = 20
 		}
 		new_character = {
@@ -107,6 +109,7 @@ narrative_event = {
 			trait = quick
 			trait = strong
 			trait = shrewd
+			health = 20
 		}
 		new_character = {
 			set_character_flag = is_ancient_one
@@ -114,8 +117,7 @@ narrative_event = {
 			set_society_grandmaster = yes 
 			culture = khazar
 			dynasty = 300000
-			character_event = { id = ACS.200 }
-			character_event = { id = ACS.30 } # Traveling around the world
+			character_event = { id = ACS.30 } # Moves to sakya mercenary band
 		}
 	}
 
@@ -165,14 +167,10 @@ character_event = {
 		FROM = {
             move_character = ROOT
 			add_trait = adventurer
+			remove_trait = prevent_marriage
 			d_mercenary_pentaghast = {
 				grant_title = PREV
             	set_defacto_liege = THIS
-			}
-			any_spouse = {
-				death = {
-					death_reason = death_childbirth
-				}
 			}
 			create_character = {
 				female = yes
@@ -181,8 +179,7 @@ character_event = {
 			new_character = {
 				save_event_target_as = olaf_spouse
 			}
-			add_spouse = event_target:olaf_spouse
-			
+			add_spouse = event_target:olaf_spouse			
         } 
 		FROMFROM = {
 			character_event = { id = ACS.6 }
@@ -1140,6 +1137,12 @@ province_event = {
 	immediate = { # burn it all
 		add_province_modifier = { name = devastated_by_tiamat years = 20 }
 		any_province_character = {
+			limit = {
+				OR = {
+					NOT = { has_landed_title = d_mercenary_pentaghast}
+					NOT = { has_landed_title = d_mercenary_sakya }
+				}
+			}
 			death = { death_reason = death_murder_unknown_combustion }
 		}
 		any_province_holding = {
