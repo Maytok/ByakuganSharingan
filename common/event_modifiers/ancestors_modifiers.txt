@@ -4,10 +4,11 @@ had_pentaghast_fertility_ritual = {
 }
 
 devastated_by_tiamat = {
-	icon = 57
+	icon = 106
 	disease_defence = -1.0
-	local_revolt_risk = 5.0
-	tax_income = -1.0
-	local_build_cost_modifier = 5.0
-	local_build_time_modifier = 5.0
+	local_revolt_risk = 1.0
+	tax_income = -3.0
+	local_build_cost_modifier = 3.0
+	local_build_time_modifier = 3.0
+	supply_limit = -20.0
 }

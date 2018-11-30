@@ -16,9 +16,25 @@ narrative_event = {
 	option = {
 		name = EVTOPTA.ACS.1
 		set_global_flag = comet_tiamat
-		location = {
-			add_province_modifier = { name = devastated_by_tiamat duration = -1 }
-		}
+		set_variable = { which = count value = 5 }
+        while = {
+            limit = {
+                check_variable = {
+                    which = count
+                    value = 1
+                }
+            }
+            subtract_variable = {
+                which = count
+                value = 1
+            }
+            random_province = {
+				limit = {
+					not = { owner = { character = ROOT } }
+				}
+				province_event = { id = ACS.47 days = 30 }                
+            }            
+        }
 	}
 }
 
@@ -1124,30 +1140,28 @@ province_event = {
 	hide_window = yes
 	is_triggered_only = yes    
 
-	immediate = { # Select random 5 provinces not the character player
-		set_variable = { which = count value = 5 }
-		while = {
-            limit = {
-                check_variable = {
-                    which = count
-                    value = 1
-                }
-            }
-            subtract_variable = {
-                which = count
-                value = 1
-            }
-			random_neighbor_province = {
-				limit = {
-					NOT = { owner = { character = FROM } }
-				}
-				add_province_modifier = devastated_by_tiamat
-				owner = {
-					character = {
-						character_event = { id = ACS.48 }
-					}					
-				}				
-			}
-        }
+	immediate = { # burn it all
+		add_province_modifier = { name = devastated_by_tiamat years = 20 }
+		any_province_character = {
+			death = { death_reason = death_murder_unknown_combustion }
+		}
+		any_province_holding = {
+			destroy_settlement = yes
+		}
+		FROM = {
+			character_event = { id = ACS.48 }
+		}
+	}
+}
+
+# ACS.48 - Tiamat comet causes devastation
+character_event = {
+	id = ACS.48
+	desc = ACS_48_DESC
+	picture = GFX_evt_emissary_byzantine
+	is_triggered_only = yes    
+
+	option = {
+		name = OK
 	}
 }
