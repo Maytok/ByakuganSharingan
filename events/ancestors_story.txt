@@ -63,7 +63,7 @@ narrative_event = {
 			trait = wroth
 			trait = paranoid
 			trait = prevent_marriage
-			health = 20
+			health = 10
 		}
 		new_character = {                        
 			set_character_flag = is_senua
@@ -87,7 +87,7 @@ narrative_event = {
 			trait = diligent
 			trait = lustful
 			trait = prevent_marriage
-			health = 20
+			health = 10
 		}
 		new_character = {
 			set_character_flag = is_olaf
@@ -109,7 +109,7 @@ narrative_event = {
 			trait = quick
 			trait = strong
 			trait = shrewd
-			health = 20
+			health = 10
 		}
 		new_character = {
 			set_character_flag = is_ancient_one
@@ -117,6 +117,7 @@ narrative_event = {
 			set_society_grandmaster = yes 
 			culture = khazar
 			dynasty = 300000
+			character_event = { id = ACS.200 }
 			character_event = { id = ACS.30 } # Moves to sakya mercenary band
 		}
 	}
