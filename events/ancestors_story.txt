@@ -15,6 +15,7 @@ narrative_event = {
 	
 	option = {
 		name = EVTOPTA.ACS.1
+		character_event = { id = ACS.2 days = 45 }
 		set_global_flag = comet_tiamat
 		set_variable = { which = count value = 5 }
         while = {
@@ -60,7 +61,7 @@ narrative_event = {
 			trait = mystic
 			trait = wroth
 			trait = paranoid
-			traut = prevent_marriage
+			trait = prevent_marriage
 			health = 20
 		}
 		new_character = {                        
@@ -101,7 +102,6 @@ narrative_event = {
 			age = 33
 			culture = scottish
 			religion = buddhist
-			trait = immortal
 			trait = mystic
 			trait = quick
 			trait = strong
