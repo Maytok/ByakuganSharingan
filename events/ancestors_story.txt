@@ -213,6 +213,9 @@ narrative_event = {
 
 	option = {
 		name = OK
+		FROM = {
+			health = 1
+		}
 		create_character = {
 			name = Vee
 			female = yes
