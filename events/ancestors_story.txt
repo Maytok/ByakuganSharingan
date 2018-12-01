@@ -193,7 +193,7 @@ character_event = {
 	}
 }
 
-# ACS.6 - Olaf leaves the court
+# ACS.6 - Player is notified about Olaf leaves the court
 character_event = {
 	id = ACS.6
 	desc = EVTDESC.ACS.6
@@ -248,7 +248,7 @@ narrative_event = {
 			trait = byakugan
 			trait = strong
 			trait = khalga_trait
-			trait = khalga_pilgrim
+			trait = prevent_marriage
 		}
 		new_character = {
 			set_mother = ROOT
@@ -451,6 +451,9 @@ character_event = {
 	}
 }
 
+#########################
+## KHALGA RESURRECTION ##
+#########################
 # ACS.16 - Select a character to resurrect Khalga if he dies
 character_event = {
 	id = ACS.16
@@ -486,21 +489,6 @@ character_event = {
 	}
 }
 
-
-# ACS.18 - Select Tilda
-character_event = {
-	id = ACS.18
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-		random_character = {
-			limit = { has_character_flag = is_ancient_one }
-			character_event = { id = ACS.10 }
-		}
-	}
-}
-
 # ACS.19 - Spawn a new instance of Khalga
 character_event = {
 	id = ACS.19
@@ -517,7 +505,7 @@ character_event = {
 			trait = byakugan
 			trait = strong
 			trait = khalga_trait
-			trait = khalga_pilgrim
+			trait = prevent_marriage
 		}
 		new_character = {
 			set_mother = ROOT           
@@ -535,6 +523,20 @@ character_event = {
 					death_reason = death_childbirth
 				}              
 			}
+		}
+	}
+}
+
+# ACS.18 - Select Tilda
+character_event = {
+	id = ACS.18
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		random_character = {
+			limit = { has_character_flag = is_ancient_one }
+			character_event = { id = ACS.10 }
 		}
 	}
 }
@@ -580,7 +582,7 @@ character_event = {
 	has_character_flag = is_vee
 
 	trigger = {
-		age = 33
+		age >= 33
 	}
 
 	immediate = {

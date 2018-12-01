@@ -6,9 +6,8 @@ on_startup = {
 
 on_yearly_pulse = {
 	events = {
-		ACS.11 # Khalga go around the world every year, searching evil characters - select the target
+		ACS.11 # Khalga go around the world every year, searching characters - select the target
 		ACS.22 # Control Vee age. No more than 33
-		ACS.31 # Periodic migration for Tilda		
 		ACS.40 # Pentaghast leader makes reproduction between two dojutsu candidates
 	}
 }
