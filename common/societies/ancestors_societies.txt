@@ -68,7 +68,7 @@ sakya_society = {
 			murder_plot_power_modifier = 0.2 # further increased plotpower
 			defensive_plot_power_modifier = 0.1
 			intrigue = 1 
-			combat_rating = 1 # bonus to dueling
+			combat_rating = 10 # bonus to dueling
 		}
 		decisions = {
 			
@@ -89,7 +89,7 @@ sakya_society = {
 			murder_plot_power_modifier = 0.30 # further increased plotpower
 			defensive_plot_power_modifier = 0.15
 			intrigue = 2 # further increase
-			combat_rating = 1 # bonus to dueling (left over)
+			combat_rating = 10 # bonus to dueling (left over)
 			plot_discovery_chance = 0.1 # bonus to plot discovery chance
 		}
 		decisions = {
@@ -111,7 +111,7 @@ sakya_society = {
 			murder_plot_power_modifier = 0.50 # further increased plotpower
 			defensive_plot_power_modifier = 0.25
 			intrigue = 3 # further increase
-			combat_rating = 1 # bonus to dueling (left over)
+			combat_rating = 10 # bonus to dueling (left over)
 			plot_discovery_chance = 0.2 # further bonus to plot discovery chance
 		}
 		decisions = {

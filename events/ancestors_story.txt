@@ -1138,12 +1138,6 @@ province_event = {
 	immediate = { # burn it all
 		add_province_modifier = { name = devastated_by_tiamat years = 20 }
 		any_province_character = {
-			limit = {
-				OR = {
-					NOT = { has_landed_title = d_mercenary_pentaghast}
-					NOT = { has_landed_title = d_mercenary_sakya }
-				}
-			}
 			death = { death_reason = death_murder_unknown_combustion }
 		}
 		any_province_holding = {
