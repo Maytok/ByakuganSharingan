@@ -1,6 +1,6 @@
 on_startup = {
 	events = {
-		ACS.1 # Comet
+		ACS.00001 # Comet
 	}
 }
 

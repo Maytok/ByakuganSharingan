@@ -1,10 +1,10 @@
 NAMESPACE = ACS
 
-# ACS.1 - Tiamat comet in the sky
+# ACS.00001 - Tiamat comet in the sky
 narrative_event = {
-	id = ACS.1
-	title = EVTTITLE.ACS.1
-	desc = EVTDESC.ACS.1
+	id = ACS.00001
+	title = ACS_00001_TITLE
+	desc = ACS_00001_DESC
 	is_triggered_only = yes    
 	ai = no
 	picture = GFX_evt_tiamat
@@ -14,7 +14,7 @@ narrative_event = {
 	}
 	
 	option = {
-		name = EVTOPTA.ACS.1
+		name = ACS_00001_OPT_A
 		character_event = { id = ACS.2 days = 45 }
 		set_global_flag = comet_tiamat
 		set_variable = { which = count value = 5 }
@@ -33,11 +33,44 @@ narrative_event = {
 				limit = {
 					not = { owner = { character = ROOT } }
 				}
-				province_event = { id = ACS.47 days = 30 }                
+				province_event = { id = ACS.00002 days = 30 }                
             }            
         }
 	}
 }
+
+# ACS.00002 - Tiamat comet causes devastation
+province_event = {
+	id = ACS.00002
+	hide_window = yes
+	is_triggered_only = yes    
+
+	immediate = { # burn it all
+		add_province_modifier = { name = devastated_by_tiamat years = 20 }
+		any_province_character = {
+			death = { death_reason = death_murder_unknown_combustion }
+		}
+		any_province_holding = {
+			destroy_settlement = yes
+		}
+		FROM = {
+			character_event = { id = ACS.00003 }
+		}
+	}
+}
+
+# ACS.00003 - Tiamat comet causes devastation
+character_event = {
+	id = ACS.00003
+	desc = ACS_00003_DESC
+	picture = GFX_evt_emissary_byzantine
+	is_triggered_only = yes    
+
+	option = {
+		name = OK
+	}
+}
+
 
 # ACS.2 - Spawn Senua, Olaf and Tilda
 narrative_event = {
@@ -1154,14 +1187,3 @@ province_event = {
 	}
 }
 
-# ACS.48 - Tiamat comet causes devastation
-character_event = {
-	id = ACS.48
-	desc = ACS_48_DESC
-	picture = GFX_evt_emissary_byzantine
-	is_triggered_only = yes    
-
-	option = {
-		name = OK
-	}
-}
